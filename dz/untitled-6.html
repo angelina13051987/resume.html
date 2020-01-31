@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</title>
+
+<body>
+    <script>
+        //-Создать объект "Документ", в котором определить свойства "Заголовок, тело, футер, дата".
+        // Создать в объекте вложенный объект - "Приложение". 
+        // @Создать в объекте "Приложение", вложенные объекты, "Заголовок, тело, футер, дата"@. 
+        //Создать методы для заполнения и отображения документа.
+        /*var Document = {
+            title: "",
+            body: "",
+            footer: "",
+            date: "",
+            attachment: {
+                title: "",
+                body: "",
+                footer: "",
+                date: "",
+            },
+            putData: function(data) {
+                var self = this;
+                Object.keys(data).forEach(function(item) {
+                    if (self.attachment.hasOwnProperty(item)) {
+                        self.attachment[item] = data[item];
+                    }
+                });
+            },
+            showData: function(data) {
+                alert("title: " + this.attachment.title + "\r\ncontent: " + this.attachment.body + "\r\nfooter: " + this.attachment.footer + "\r\ndate: " + this.attachment.date);
+            }
+        };
+        Document.putData(
+            title: 'Заголовок',
+            body: 'Тело',
+            footer: 'Футер',
+            date: new Date()
+        );
+
+
+        Document.showData();*/
+
+
+        /*var Document = {
+            title: "",
+            body: "",
+            footer: "",
+            date: "",
+            putData: function(data) {
+                var self = this;
+                Object.keys(data).forEach(function(item) {
+                    if (self.hasOwnProperty(item)) {
+                        self[item] = data[item];
+                    }
+                });
+            },
+            showData: function() {
+                alert("title: " + this.title + "\r\ncontent: " + this.body + "\r\nfooter: " + this.footer + "\r\ndate: " + this.date);
+            }
+        };
+
+        Document.putData({
+            title: 'Заголовок',
+            body: 'Тело',
+            footer: 'Футер',
+            date: new Date()
+        });
+
+        Document.showData();*/
+
+        var content = {
+            title: "",
+            body: "",
+            footer: "",
+            date: "",
+            print: function(name) {
+                document.write("<p>" + "Заголовок " + name + " - " + this.title);
+                document.write("<p>" + "Тело " + name + " - " + this.body);
+                document.write("<p>" + "Футер " + name + " - " + this.footer);
+                document.write("<p>" + "Дата " + name + " - " + this.date);
+            }
+        };
+
+        var myDocument = content;
+        myDocument.application = content;
+        myDocument.append = function() {
+            myDocument.title = prompt("Введите заголовок!");
+            myDocument.application.title = myDocument.title;
+            myDocument.body = prompt("Введите тело!");
+            myDocument.application.body = myDocument.body;
+            myDocument.footer = prompt("Введите футер!");
+            myDocument.application.footer = myDocument.footer;
+            myDocument.date = prompt("Введите дату!");
+            myDocument.application.date = myDocument.date;
+        };
+
+        myDocument.append();
+        myDocument.print("документа");
+        myDocument.application.print("приложения");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<script>
+const defaults = {
+    host : "localhast",
+    dbName : "blog",
+    user : "admin"
+}
+
+const opts = {
+    user : "Ivan",
+    password : "123456789"
+}
+
+//const newData = Object.assign({}, defaults, opts) ES6
+
+//ES9
+
+const newData = {...defaults, ...opts}
+
+console.log(newData)
+
+</script>

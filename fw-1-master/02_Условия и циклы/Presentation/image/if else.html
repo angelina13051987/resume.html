@@ -1,0 +1,4843 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <link rel="shortcut icon" type="image/png" href="https://tutorialcodeplay.com/assets/site/images/favicon.png"/>
+
+    <meta name="theme-color" content="#2f313e"/>
+
+
+    <title>if statement in javascript</title>
+    
+<!--    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+-->
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    -->
+			<meta name="robots" content="index,follow">
+		
+	
+						
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<meta name="google-site-verification" content="mK6njGTwBFthQqF2CbvNbYgCsxq7_-2z_iMKIpWtFJ0" />
+			<meta property='fb:app_id' content='552262124907737'/>
+			
+			<link ="" >
+			
+			
+			<meta name="description" content="if statement is used to check the specified condition. In javascript there are three types if, if..else, and if..else if...else statement . Normally if the condition is correct if block statements is executed and else it executes the next statement. ">
+			<meta name="keywords" content="if statement in javascript,if statement,javascript if,if condition,if condition flowchart,else if,else,if statement example,if statement execution steps">
+			<meta name="author" content="">
+
+		  
+			<meta property="og:description" content="if statement is used to check the specified condition. In javascript there are three types if, if..else, and if..else if...else statement . Normally if the condition is correct if block statements is executed and else it executes the next statement. " />
+			<meta name="twitter:description" content="if statement is used to check the specified condition. In javascript there are three types if, if..else, and if..else if...else statement . Normally if the condition is correct if block statements is executed and else it executes the next statement. " />
+			<meta itemprop="description" content="if statement is used to check the specified condition. In javascript there are three types if, if..else, and if..else if...else statement . Normally if the condition is correct if block statements is executed and else it executes the next statement. " />
+
+
+
+
+
+
+
+
+			<meta name="title" content="if statement in javascript">
+			<meta property="og:title" content="if statement in javascript" />
+			<meta name="twitter:title" content="if statement in javascript" />
+			<meta property="og:image" content="https://tutorialcodeplay.com/uploads/tutorial/image/tutorial_images_1529220850.png" />
+			<meta name="twitter:image:src" content="https://tutorialcodeplay.com/uploads/tutorial/image/tutorial_images_1529220850.png" />
+			<meta itemprop="image" content="https://tutorialcodeplay.com/uploads/tutorial/image/tutorial_images_1529220850.png" />
+			
+			
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta property="og:url" content="https://tutorialcodeplay.com/javascript/javascript-if-statement.html" />
+<meta property="og:type" content="website" />
+<meta property="og:image:width" content="289" />
+<meta property="og:image:height" content="319" />
+<meta property="og:image:alt" content="if statement in javascript" />
+
+
+
+
+<meta name="yandex-verification" content="f5cd0e366d4082f1" />
+<meta name="msvalidate.01" content="3FBB219E66E68E78F520197E34BB5582" />
+
+
+
+		
+		
+
+    
+
+  
+  
+  
+<!--
+      <link href="https://tutorialcodeplay.com/assets/site/css/joe-new.css" rel="stylesheet">
+-->
+<style>
+.syHead
+{
+	margin-top: 15px;
+}
+.list-item
+{
+    font-size: 16px;
+    line-height: 30px;
+	margin-left: 25px;
+}
+
+th
+{
+	text-decoration: none !important;
+}
+p {
+    font-size: 16px;
+    line-height: 30px;
+    /*kishorefont-family: DidactGothicRegular;*/
+}
+h2
+{
+	padding-bottom: 0px;
+	/*margin-top: 50px !important;*/
+}
+/*
+.exaple-inner
+{
+	border-left: 4px solid #1a6c90;
+}
+*/
+.goatag
+{
+	cursor: pointer;
+    color: black;
+}
+
+.goatag:hover
+{
+	cursor: pointer;
+    color: #614242;
+}
+
+p {
+    margin-left: 10px !important;
+}
+
+.main-area{
+ font-family: arial,sans-serif;
+}
+
+.sub-notes b{
+	    font-size: 15px;
+}
+
+
+
+
+.exaple-inner .btn-2
+{
+	margin-top: 0px!important;
+	width: 100%;
+	text-align: center;
+
+    position: sticky !important;
+    float: right !important;
+    z-index: 2;
+    padding: 1px 20px !important;
+}
+section
+{
+	margin: auto !important;
+}
+
+.exaple-inner .CodeMirror-wrap
+{
+    background: #fafbfc url(https://4.bp.blogspot.com/-Fjst4zuk47U/WXJmIIm_kTI/AAAAAAAAMCM/6SLNRWG4BEQ6YVl-0eK81IzAzLoHZJozwCLcBGAs/s1600/blueprint.png) repeat !important;
+}
+
+
+#sysMenu .clsMainMenu
+{
+	background: #096e98;
+    color: white;
+	line-height: 26px;
+	cursor: default;
+	margin-left: -10px;
+}
+
+
+#sysMenu .clsSubMenu
+{
+	line-height: 24px;
+}
+
+#sysMenu strong
+{
+	text-decoration: none !important;
+	font-weight: unset !important;
+	font-size: 15px;
+}
+
+
+
+
+
+#menu .clsMainMenu
+{
+	background: #096e98;
+    color: white;
+	line-height: 26px;
+	cursor: default;
+	margin-left: -10px;
+}
+
+
+
+#menu .clsMainMenu a
+{
+    line-height: 26px;
+	color: white;
+}
+
+
+
+#menu .clsSubMenu
+{
+	line-height: 24px;
+}
+
+#menu strong
+{
+	text-decoration: none !important;
+	font-weight: unset !important;
+	font-size: 15px;
+}
+
+
+
+
+#menu .clsSubMenu a:hover
+{
+	background: red;
+}
+
+
+.tutorial-exaple h3
+{
+margin-left: 5px;
+}
+
+</style>
+    
+    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+    
+    
+
+
+<!--
+    <link href="https://tutorialcodeplay.com/assets/site/css/custom.css" rel="stylesheet">  
+-->
+<style>
+@font-face {
+  font-family: DidactGothicRegular;
+  src: url('../fonts/DidactGothicRegular.ttf');
+}
+
+
+html,
+body {
+font-family: "Trebuchet MS";
+background:#fff;
+height:100%;
+
+
+}
+header{position:relative;}
+header, section, footer{display:block; padding:0; margin:0;}
+
+ul,li{padding:0; margin:0;}
+p,h1,h2,h3,h4,h5,h6,a{ padding:0; margin:0;}
+
+/*a:hover, a:focus{text-decoration:none; color:#fff;}*/
+
+@font-face {
+	font-family: "Trebuchet MS";
+	font-style: normal;
+	font-weight: 300;
+	src: local('Trebuchet MS'), local('Trebuchet MS'), url("../fonts/Trebuchet MS.ttf") format('truetype');
+}
+@font-face {
+font-family: 'icomoon';
+src: url('../fonts/icomoon.eot');
+src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),  url('../fonts/icomoon.woff') format('woff'),  url('../fonts/icomoon.ttf') format('truetype'),  url('../fonts/icomoon.svg#icomoon') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+
+.clear{clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+.cnt{margin:0 auto;}
+header{position:relative;width:100%;display:block;overflow:hidden;}
+.logo{
+	width:250px;
+	margin:8px 0;
+	text-align:center;
+}
+.top-links{margin:8px 0 0 0;}
+.top-links ul{padding:0; margin:0;}
+.top-links ul li{display:inline-block; margin:0 15px 0;}
+.top-links ul li a{color:#fff;}
+.top-links ul li a img{padding:0 6px 0 0;}
+
+.sidebar{background:#f1f1f1;width:230px;float:left; min-height:860px; position:relative; z-index:99999999999999999999;}
+.sidebar b{padding: 2px 15px; font-size: 15px; background: #2cabe2; width: 100%; display: block; color: #fff;}
+.sidebar ul{padding:0}
+.sidebar ul li{display:block;}
+.sidebar ul li a{color:#fff;width:100%;display:block;padding: 2px 15px; color: #2f313e; font-size: 14px;text-decoration: none;}
+.sidebar ul li a img{padding:0 5px 0 0;float:left;}
+.sidebar ul li a:hover{background:#e0e0e0; color: #000;}
+
+#dl-menu, #primary-navigation{display: none;}
+
+
+#custom-search-input .input-group .input-lg{height: 40px; font-size: 14px;}
+
+#custom-search-input{
+  width: 100%;
+  margin: 15px 0;
+    border: solid 1px #E4E4E4;
+    border-radius:25px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 18px;
+}
+
+
+.content-section {
+    left: 0;
+    width: 100%;
+    padding: 0 16px 0 245px;
+    position: absolute;
+    /*top: 140px;*/
+}
+
+
+.navbar{border-radius: 0 !important; background: #2f313e !important;-webkit-box-shadow: -1px -1px 5px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px -1px 5px -2px rgba(0,0,0,0.75);
+box-shadow: -1px -1px 5px -2px rgba(0,0,0,0.75); border: none !important; z-index: 9; margin-bottom: 10px !important;}
+
+.navbar-brand{ line-height: 12px !important; height: 44px !important; display: none; }
+.navbar-nav > li > a{line-height:14px !important;}
+
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a{color: #fff;  font-size: 16px; padding: 15px 20px;}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a:hover{background: #2cabe2;}
+
+.home-icon{padding: 15px 5px 15px 0 !important; }
+
+.home-icon i{color: #2cabe2 !important;}
+.home-icon:hover{background: none !important}
+
+
+
+
+
+.main-link{width: 100%;background:#f1f1f1; height: 194px; display: block; position: relative; text-align: center; margin-bottom: 30px;}
+.main-link:hover{background: #2cabe2;}
+.main-link img{   position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;}
+
+
+.footer ul{padding: 0} 
+.footer ul b{font-size: 18px; display: block; padding: 0 0 15px 0;}  
+.footer ul li{display: inline-block; width: 100%;} 
+.footer ul li a{color:#2f313e; line-height: 25px; font-size: 14px;}
+
+.footer-bottom {padding: 15px; border-top: solid 1px #e4e4e4; margin: 15px 0 0 0; text-align: center;}
+
+.add img{width: 100%;}
+
+
+
+.main-area h1{font-size: 28px; display: block;width: 100%; padding: 0 0 15px 0;}
+.main-area h2{font-size: 24px; display: block; padding: 10px 0;margin-bottom: 5px;}
+.main-area h3{font-size: 18px; display: block; padding: 10px 0;}
+
+.main-area .table{margin: 20px 0;}
+
+.top-btn-section{display: inline-block; width: 100%; padding: 15px 0;  border-bottom: solid 1px #f1f1f1;}
+
+.btn-1{ padding: 7px 25px; background:#fff; color: #898989; font-size: 16px;border:solid 1px #f1f1f1;margin-top: 10px;text-decoration: none !important;}
+.btn-1:hover{background: #2cabe2;color: white;}
+
+.btn-2{ padding: 7px 25px; background:#2cabe2; color: #fff !important; font-size: 16px;border:solid 1px #f1f1f1;margin-top: 10px;text-decoration: none !important;}
+.btn-2:hover{background: #fff;color: #898989; }
+
+/*#f1f1f1*/
+.tutorial-exaple {
+	background: #cecbcb none repeat scroll 0 0;
+   display: inline-block;
+   margin: 20px 0;
+   /* padding: 15px; */
+  
+   width: 90%;
+   box-shadow: 1px 2px 6px -1px;
+   margin-left: 1%;
+/*	
+	background: #ecebeb none repeat scroll 0 0;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 15px;
+    width: 100%;
+*/	
+}
+.exaple-inner{background: #fff;}
+
+@media only screen and (max-device-width: 767px){
+	.tutorial-exaple{
+		width: 98%;
+	}
+	.newSidebar
+	{
+		display:none;
+	}	
+}
+
+
+
+.sidebar-new{width: 100% !important; min-height: auto !important; margin-bottom: 30px;}
+
+
+.ma-infinitypush-button{display: none !important;}
+
+
+
+.editor{background:#f1f1f1; display: block; width: 100%;}
+
+.editor ul{padding: 0 15px;}
+
+.editor ul li{display: inline-block;}
+
+.editor-col{background: #fff; padding: 15px; margin-bottom: 30px; min-height: 450px; border: solid 1px #efeeee;}
+
+
+
+@media only screen and (max-width: 767px) {
+  #myNavbar{padding: 0; overflow: hidden; background: #2f313e !important;}
+  .content-section{ top: 198px; }
+
+  .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a{ text-align: center;}
+
+.navbar-brand{display: block; text-align: center; float: right; }
+
+
+
+  .content-section {
+    left: 0;
+    min-width: 100%;
+    padding: 0 16px;
+    position: relative;
+    top: 0;
+}
+
+	.login{ max-width:310px;}
+	.logo, .top-links{width:100%; text-align:center;}
+    .ma-infinitypush-button{display:block !important;}	
+#dl-menu, #primary-navigation {display:block;}	
+	.sidebar{display:none;}
+  .sidebar-new{display: block !important; z-index: 0 !important}
+	.content-section{
+    padding: 0 16px;
+    position: relative;
+	top:0px;
+	left:0;
+    min-width:100%;}
+	
+}
+	
+
+@media only screen and (max-width: 480px) {
+	.logo, .top-links{width:100%; text-align:center;}	
+}
+
+.CodeMirror
+{
+	    line-height: 24px !important;	
+}
+
+
+.cm-s-neo.CodeMirror {
+    /*line-height: 10px !important;*/
+}
+
+
+#inner-content-div ul {
+    margin-bottom: 30px;
+}
+.slimScrollRail
+{
+	background: rgba(51, 51, 51, 0.08) !important;
+}
+
+code{font-size: 16px;}
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<!--
+    <link href="https://tutorialcodeplay.com/assets/site/css/custom-new.css" rel="stylesheet"> 
+-->
+<style>
+.editor-col-2{background:#fff;padding:15px;margin-bottom:30px;min-height:490px;border:solid 1px #efeeee;-webkit-box-shadow: 0px 0px 6px -3px rgba(0,0,0,0.52);
+-moz-box-shadow: 0px 0px 6px -3px rgba(0,0,0,0.52);
+box-shadow: 0px 0px 6px -3px rgba(0,0,0,0.52);}
+
+.btn-1{background: #2f313e; color:#fff;}
+.btn-2:hover{background:#2f313e; color:#fff; }
+
+.editor-sec-1{padding-right: 6px !important;}
+.editor-sec-2{padding-left: 6px !important;}
+b{padding: 5px 0;  font-size:16px;}
+.notes{
+	background:#cbe8f5; padding: 15px; border-left: solid 6px #2cabe2; margin-bottom:15px;
+    line-height: 30px;
+    font-size: 15px;
+    /*font-family: cursive;*/
+
+}
+
+.sub-notes{background:#ffffcc; border-left: solid 6px #ffeb35;margin-bottom:15px;margin-top: 10px;padding-right:14px;margin-left:10px;}
+.syntaxes{padding: 15px; background: #f1f1f1; border: solid 1px #ccc; margin:0;margin-bottom:15px;}
+
+.list-item ul{padding: 0 12px;}
+
+	p{
+text-align: justify;
+	}
+	
+	img {
+    vertical-align: super !important;
+}
+
+#navbar ul li
+{
+ height: 44px;
+}
+
+#navbar ul li a:hover{
+ background: #11a4de;
+}
+
+#navbar ul li a
+{
+height: 100%;
+}
+
+
+</style>
+
+
+
+<!--  
+    <link href="https://tutorialcodeplay.com/assets/site/css/menu.css" rel="stylesheet"> 
+-->
+<style>
+/* Common styles of menus */
+
+.dl-menuwrapper {
+ float: left;
+    left: 3px;
+    z-index: 2147483647;
+    max-width: 300px;
+    perspective: 1000px;
+    perspective-origin: 50% 200%;
+    position: absolute;
+    top: 3px;
+    width: 100%;
+}
+
+.dl-menuwrapper:first-child {
+	margin-right: 100px;
+}
+
+.dl-menuwrapper button {
+	background: #222d32;
+	border: none;
+	width: 42px;
+	height: 40px;
+	text-indent: -900em;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+}
+.dl-menu.dl-menuopen img{  margin: 0 10px 0 0;}
+
+.dl-menuwrapper button:hover,
+.dl-menuwrapper button.dl-active,
+.dl-menuwrapper ul {
+	background: #696a73;
+}
+
+.dl-menuwrapper button:after {
+	content: '';
+	position: absolute;
+	width: 68%;
+	height: 3px;
+	background: #fff;
+	top: 8px;
+	left: 16%;
+	box-shadow: 
+		0 10px 0 #fff, 
+		0 20px 0 #fff;
+}
+
+.dl-menuwrapper ul {
+	padding: 0;
+	list-style: none;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.dl-menuwrapper li {
+	position: relative;
+}
+
+.dl-menuwrapper li a {
+	display: block;
+	position: relative;
+	padding: 10px 20px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 300;
+	color: #fff;
+	outline: none;
+	text-transform: capitalize;
+}
+
+.no-touch .dl-menuwrapper li a:hover {
+	background: rgba(255,248,213,0.1);
+}
+
+.dl-menuwrapper li.dl-back > a {
+	padding-left: 30px;
+	background: rgba(0,0,0,0.1);
+}
+
+.dl-menuwrapper li.dl-back:after,
+.dl-menuwrapper li > a:not(:only-child):after {
+	position: absolute;
+	top: 0;
+	line-height: 50px;
+	font-family: 'icomoon';
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	content: "\e000";
+}
+
+.dl-menuwrapper li.dl-back:after {
+	left: 10px;
+	color: rgba(212,204,198,0.3);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.dl-menuwrapper li > a:after {
+	right: 10px;
+	color:#2f313e;
+}
+
+.dl-menuwrapper .dl-menu {
+	margin: 5px 0 0 0;
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.dl-menuwrapper .dl-menu.dl-menu-toggle {
+	transition: all 0.3s ease;
+}
+
+.dl-menuwrapper .dl-menu.dl-menuopen {
+	opacity: 1;
+	pointer-events: auto;
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+/* Hide the inner submenus */
+.dl-menuwrapper li .dl-submenu {
+	display: none;
+}
+
+/* 
+When a submenu is openend, we will hide all li siblings.
+For that we give a class to the parent menu called "dl-subview".
+We also hide the submenu link. 
+The opened submenu will get the class "dl-subviewopen".
+All this is done for any sub-level being entered.
+*/
+.dl-menu.dl-subview li,
+.dl-menu.dl-subview li.dl-subviewopen > a,
+.dl-menu.dl-subview li.dl-subview > a {
+	display: none;
+}
+
+.dl-menu.dl-subview li.dl-subview,
+.dl-menu.dl-subview li.dl-subview .dl-submenu,
+.dl-menu.dl-subview li.dl-subviewopen,
+.dl-menu.dl-subview li.dl-subviewopen > .dl-submenu,
+.dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+	display: block;
+}
+
+/* Dynamically added submenu outside of the menu context */
+.dl-menuwrapper > .dl-submenu {
+	position: absolute;
+	width: 100%;
+	top: 50px;
+	left: 0;
+	margin: 0;
+}
+
+/* Animation classes for moving out and in */
+
+.dl-menu.dl-animate-out-1 {
+	-webkit-animation: MenuAnimOut1 0.4s;
+	animation: MenuAnimOut1 0.4s;
+}
+
+.dl-menu.dl-animate-out-2 {
+	-webkit-animation: MenuAnimOut2 0.3s ease-in-out;
+	animation: MenuAnimOut2 0.3s ease-in-out;
+}
+
+.dl-menu.dl-animate-out-3 {
+	-webkit-animation: MenuAnimOut3 0.4s ease;
+	animation: MenuAnimOut3 0.4s ease;
+}
+
+.dl-menu.dl-animate-out-4 {
+	-webkit-animation: MenuAnimOut4 0.4s ease;
+	animation: MenuAnimOut4 0.4s ease;
+}
+
+.dl-menu.dl-animate-out-5 {
+	-webkit-animation: MenuAnimOut5 0.4s ease;
+	animation: MenuAnimOut5 0.4s ease;
+}
+
+@-webkit-keyframes MenuAnimOut1 {
+	0% { }
+	50% {
+		-webkit-transform: translateZ(-250px) rotateY(30deg);
+	}
+	75% {
+		-webkit-transform: translateZ(-372.5px) rotateY(15deg);
+		opacity: .5;
+	}
+	100% {
+		-webkit-transform: translateZ(-500px) rotateY(0deg);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes MenuAnimOut2 {
+	0% { }
+	100% {
+		-webkit-transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes MenuAnimOut3 {
+	0% { }
+	100% {
+		-webkit-transform: translateZ(300px);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes MenuAnimOut4 {
+	0% { }
+	100% {
+		-webkit-transform: translateZ(-300px);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes MenuAnimOut5 {
+	0% { }
+	100% {
+		-webkit-transform: translateY(40%);
+		opacity: 0;
+	}
+}
+
+@keyframes MenuAnimOut1 {
+	0% { }
+	50% {
+		-webkit-transform: translateZ(-250px) rotateY(30deg);
+		transform: translateZ(-250px) rotateY(30deg);
+	}
+	75% {
+		-webkit-transform: translateZ(-372.5px) rotateY(15deg);
+		transform: translateZ(-372.5px) rotateY(15deg);
+		opacity: .5;
+	}
+	100% {
+		-webkit-transform: translateZ(-500px) rotateY(0deg);
+		transform: translateZ(-500px) rotateY(0deg);
+		opacity: 0;
+	}
+}
+
+@keyframes MenuAnimOut2 {
+	0% { }
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+@keyframes MenuAnimOut3 {
+	0% { }
+	100% {
+		-webkit-transform: translateZ(300px);
+		transform: translateZ(300px);
+		opacity: 0;
+	}
+}
+
+@keyframes MenuAnimOut4 {
+	0% { }
+	100% {
+		-webkit-transform: translateZ(-300px);
+		transform: translateZ(-300px);
+		opacity: 0;
+	}
+}
+
+@keyframes MenuAnimOut5 {
+	0% { }
+	100% {
+		-webkit-transform: translateY(40%);
+		transform: translateY(40%);
+		opacity: 0;
+	}
+}
+
+.dl-menu.dl-animate-in-1 {
+	-webkit-animation: MenuAnimIn1 0.3s;
+	animation: MenuAnimIn1 0.3s;
+}
+
+.dl-menu.dl-animate-in-2 {
+	-webkit-animation: MenuAnimIn2 0.3s ease-in-out;
+	animation: MenuAnimIn2 0.3s ease-in-out;
+}
+
+.dl-menu.dl-animate-in-3 {
+	-webkit-animation: MenuAnimIn3 0.4s ease;
+	animation: MenuAnimIn3 0.4s ease;
+}
+
+.dl-menu.dl-animate-in-4 {
+	-webkit-animation: MenuAnimIn4 0.4s ease;
+	animation: MenuAnimIn4 0.4s ease;
+}
+
+.dl-menu.dl-animate-in-5 {
+	-webkit-animation: MenuAnimIn5 0.4s ease;
+	animation: MenuAnimIn5 0.4s ease;
+}
+
+@-webkit-keyframes MenuAnimIn1 {
+	0% {
+		-webkit-transform: translateZ(-500px) rotateY(0deg);
+		opacity: 0;
+	}
+	20% {
+		-webkit-transform: translateZ(-250px) rotateY(30deg);
+		opacity: 0.5;
+	}
+	100% {
+		-webkit-transform: translateZ(0px) rotateY(0deg);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes MenuAnimIn2 {
+	0% {
+		-webkit-transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes MenuAnimIn3 {
+	0% {
+		-webkit-transform: translateZ(300px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes MenuAnimIn4 {
+	0% {
+		-webkit-transform: translateZ(-300px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes MenuAnimIn5 {
+	0% {
+		-webkit-transform: translateY(40%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes MenuAnimIn1 {
+	0% {
+		-webkit-transform: translateZ(-500px) rotateY(0deg);
+		transform: translateZ(-500px) rotateY(0deg);
+		opacity: 0;
+	}
+	20% {
+		-webkit-transform: translateZ(-250px) rotateY(30deg);
+		transform: translateZ(-250px) rotateY(30deg);
+		opacity: 0.5;
+	}
+	100% {
+		-webkit-transform: translateZ(0px) rotateY(0deg);
+		transform: translateZ(0px) rotateY(0deg);
+		opacity: 1;
+	}
+}
+
+@keyframes MenuAnimIn2 {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes MenuAnimIn3 {
+	0% {
+		-webkit-transform: translateZ(300px);
+		transform: translateZ(300px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0px);
+		transform: translateZ(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes MenuAnimIn4 {
+	0% {
+		-webkit-transform: translateZ(-300px);
+		transform: translateZ(-300px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0px);
+		transform: translateZ(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes MenuAnimIn5 {
+	0% {
+		-webkit-transform: translateY(40%);
+		transform: translateY(40%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-in-1 {
+	-webkit-animation: SubMenuAnimIn1 0.4s ease;
+	animation: SubMenuAnimIn1 0.4s ease;
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-in-2 {
+	-webkit-animation: SubMenuAnimIn2 0.3s ease-in-out;
+	animation: SubMenuAnimIn2 0.3s ease-in-out;
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-in-3 {
+	-webkit-animation: SubMenuAnimIn3 0.4s ease;
+	animation: SubMenuAnimIn3 0.4s ease;
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
+	-webkit-animation: SubMenuAnimIn4 0.4s ease;
+	animation: SubMenuAnimIn4 0.4s ease;
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-in-5 {
+	-webkit-animation: SubMenuAnimIn5 0.4s ease;
+	animation: SubMenuAnimIn5 0.4s ease;
+}
+
+@-webkit-keyframes SubMenuAnimIn1 {
+	0% {
+		-webkit-transform: translateX(50%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes SubMenuAnimIn2 {
+	0% {
+		-webkit-transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes SubMenuAnimIn3 {
+	0% {
+		-webkit-transform: translateZ(-300px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes SubMenuAnimIn4 {
+	0% {
+		-webkit-transform: translateZ(300px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes SubMenuAnimIn5 {
+	0% {
+		-webkit-transform: translateZ(-200px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0);
+		opacity: 1;
+	}
+}
+
+@keyframes SubMenuAnimIn1 {
+	0% {
+		-webkit-transform: translateX(50%);
+		transform: translateX(50%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes SubMenuAnimIn2 {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes SubMenuAnimIn3 {
+	0% {
+		-webkit-transform: translateZ(-300px);
+		transform: translateZ(-300px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0px);
+		transform: translateZ(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes SubMenuAnimIn4 {
+	0% {
+		-webkit-transform: translateZ(300px);
+		transform: translateZ(300px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0px);
+		transform: translateZ(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes SubMenuAnimIn5 {
+	0% {
+		-webkit-transform: translateZ(-200px);
+		transform: translateZ(-200px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-out-1 {
+	-webkit-animation: SubMenuAnimOut1 0.4s ease;
+	animation: SubMenuAnimOut1 0.4s ease;
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-out-2 {
+	-webkit-animation: SubMenuAnimOut2 0.3s ease-in-out;
+	animation: SubMenuAnimOut2 0.3s ease-in-out;
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-out-3 {
+	-webkit-animation: SubMenuAnimOut3 0.4s ease;
+	animation: SubMenuAnimOut3 0.4s ease;
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
+	-webkit-animation: SubMenuAnimOut4 0.4s ease;
+	animation: SubMenuAnimOut4 0.4s ease;
+}
+
+.dl-menuwrapper > .dl-submenu.dl-animate-out-5 {
+	-webkit-animation: SubMenuAnimOut5 0.4s ease;
+	animation: SubMenuAnimOut5 0.4s ease;
+}
+
+@-webkit-keyframes SubMenuAnimOut1 {
+	0% {
+		-webkit-transform: translateX(0%);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateX(50%);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes SubMenuAnimOut2 {
+	0% {
+		-webkit-transform: translateX(0%);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateX(100%);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes SubMenuAnimOut3 {
+	0% {
+		-webkit-transform: translateZ(0px);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateZ(-300px);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes SubMenuAnimOut4 {
+	0% {
+		-webkit-transform: translateZ(0px);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateZ(300px);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes SubMenuAnimOut5 {
+	0% {
+		-webkit-transform: translateZ(0);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateZ(-200px);
+		opacity: 0;
+	}
+}
+
+@keyframes SubMenuAnimOut1 {
+	0% {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateX(50%);
+		transform: translateX(50%);
+		opacity: 0;
+	}
+}
+
+@keyframes SubMenuAnimOut2 {
+	0% {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		opacity: 0;
+	}
+}
+
+@keyframes SubMenuAnimOut3 {
+	0% {
+		-webkit-transform: translateZ(0px);
+		transform: translateZ(0px);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateZ(-300px);
+		transform: translateZ(-300px);
+		opacity: 0;
+	}
+}
+
+@keyframes SubMenuAnimOut4 {
+	0% {
+		-webkit-transform: translateZ(0px);
+		transform: translateZ(0px);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateZ(300px);
+		transform: translateZ(300px);
+		opacity: 0;
+	}
+}
+
+@keyframes SubMenuAnimOut5 {
+	0% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateZ(-200px);
+		transform: translateZ(-200px);
+		opacity: 0;
+	}
+}
+
+/* No JS Fallback */
+.no-js .dl-menuwrapper .dl-menu {
+	position: relative;
+	opacity: 1;
+	-webkit-transform: none;
+	transform: none;
+}
+
+.no-js .dl-menuwrapper li .dl-submenu {
+	display: block;
+}
+
+.no-js .dl-menuwrapper li.dl-back {
+	display: none;
+}
+
+.no-js .dl-menuwrapper li > a:not(:only-child) {
+	background: rgba(0,0,0,0.1);
+}
+
+.no-js .dl-menuwrapper li > a:not(:only-child):after {
+	content: '';
+}
+
+/* Colors for demos */
+
+/* Demo 1 */
+.demo-1 .dl-menuwrapper button {
+	background: #c62860;
+}
+
+.demo-1 .dl-menuwrapper button:hover,
+.demo-1 .dl-menuwrapper button.dl-active,
+.demo-1 .dl-menuwrapper ul {
+	background: #9e1847;
+}
+
+/* Demo 2 */
+.demo-2 .dl-menuwrapper button {
+	background: #e86814;
+}
+
+.demo-2 .dl-menuwrapper button:hover,
+.demo-2 .dl-menuwrapper button.dl-active,
+.demo-2 .dl-menuwrapper ul {
+	background: #D35400;
+}
+
+/* Demo 3 */
+.demo-3 .dl-menuwrapper button {
+	background: #08cbc4;
+}
+
+.demo-3 .dl-menuwrapper button:hover,
+.demo-3 .dl-menuwrapper button.dl-active,
+.demo-3 .dl-menuwrapper ul {
+	background: #00b4ae;
+}
+
+/* Demo 4 */
+.demo-4 .dl-menuwrapper button {
+	background: #90b912;
+}
+
+.demo-4 .dl-menuwrapper button:hover,
+.demo-4 .dl-menuwrapper button.dl-active,
+.demo-4 .dl-menuwrapper ul {
+	background: #79a002;
+}
+
+/* Demo 5 */
+.demo-5 .dl-menuwrapper button {
+	background: #744783;
+}
+
+.demo-5 .dl-menuwrapper button:hover,
+.demo-5 .dl-menuwrapper button.dl-active,
+.demo-5 .dl-menuwrapper ul {
+	background: #643771;
+}
+.main,
+.container > header {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1.875em 3.125em 1.875em;
+}
+
+.main {
+	max-width: 69em;
+	padding-top: 2em;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 0 2em;
+	min-height: 300px;
+	min-width: 320px;
+	position: relative;
+}
+
+.column:nth-child(2) {
+	min-height: 400px;
+	box-shadow: -1px 0 0 rgba(0,0,0,0.1);
+	background: url(../images/clickhere.png) 90px 0 no-repeat;
+}
+
+.column:last-child:before {
+	content: '';
+	position: absolute;
+	height: 7px;
+	background: #ceccc6;
+	top: 100px;
+	left: 10px;
+}
+
+.column p {
+	font-weight: 300;
+	font-size: 2em;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+	line-height: 1.5;
+}
+
+.container > header {
+	padding: 2.875em 1.875em 2.875em;
+	text-align: center;
+	background: rgba(0,0,0,0.01);
+}
+
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	color: #89867e;
+	font-weight: 300;
+}
+
+.container > header span {
+	display: block;
+	font-size: 60%;
+	color: #ceccc6;
+	padding: 0 0 0.6em 0.1em;
+}
+
+/* Header Style */
+.codrops-top {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.95);
+	text-transform: uppercase;
+	position: relative;
+	font-size: 0.68em;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+	line-height: 2.2;
+}
+
+.codrops-top a {
+	padding: 0 1em;
+	letter-spacing: 0.1em;
+	color: #333;
+	display: inline-block;
+}
+
+.codrops-top a:hover {
+	background: rgba(255,255,255,0.99);
+	color: #000;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	float: left;
+	display: block;
+}
+
+/* Demo Buttons Style */
+.codrops-demos {
+	padding-top: 1em;
+	font-size: 0.9em;
+}
+
+.codrops-demos a {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.7em 1.1em;
+	border: 3px solid #b1aea6;
+	color: #b1aea6;
+	font-weight: 700;
+}
+
+.codrops-demos a:hover,
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+	border-color: #89867e;
+	color: #89867e;
+}
+
+@media screen and (max-width: 46.0625em) {
+
+	.main {
+		padding: 0;
+	}
+
+	.column {
+		width: 100%;
+		min-width: auto;
+		min-height: auto;
+		padding: 3em 2em; 
+	}
+
+	.column p {
+		text-align: left;
+		font-size: 1.5em;
+	}
+
+	.column:nth-child(2) {
+		box-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+		background-position: 90px 3em;
+	}
+}
+</style>
+
+
+<!--
+    <link rel="stylesheet" type="text/css" href="https://tutorialcodeplay.com/assets/site/css/jquery.ma.infinitypush.css" />
+-->
+<style>
+/*****************************************************************
+ * Infinity Push
+ *****************************************************************/
+.ma-infinitypush-open {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.ma-infinitypush-wrapper {
+  background-color: #f9f7f6;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  z-index: 9999;
+}
+.ma-infinitypush-wrapper.ma-infinitypush-active-button {
+  position: absolute;
+}
+.ma-infinitypush-wrapper.ma-infinitypush-active-button.ma-infinitypush-button-left .ma-infinitypush-button {
+  margin: 0 0 0 22px;
+  right: -44px;
+}
+.ma-infinitypush-wrapper.ma-infinitypush-active-button.ma-infinitypush-button-right .ma-infinitypush-button {
+  margin: 0 22px 0 0;
+  left: -44px;
+}
+.ma-infinitypush-wrapper .ma-infinitypush-button {
+  display: block;
+  box-shadow: inset 0 4px #2f313e, inset 0 6px white, inset 0 9px #2f313e, inset 0 11px white, inset 0 14px #2f313e, inset 0 16px white;
+  position: absolute;
+  text-indent: -9999px;
+  width: 25px;
+  height: 25px;
+  top: 13px;
+  cursor: pointer;
+  z-index: 100;
+}
+.ma-infinitypush-wrapper.ma-infinitypush-left .ma-infinitypush ul li ul, .ma-infinitypush-wrapper.ma-infinitypush-left .ma-infinitypush ul li ol, .ma-infinitypush-wrapper.ma-infinitypush-left .ma-infinitypush ol li ul, .ma-infinitypush-wrapper.ma-infinitypush-left .ma-infinitypush ol li ol {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ma-infinitypush-wrapper.ma-infinitypush-right .ma-infinitypush ul li ul, .ma-infinitypush-wrapper.ma-infinitypush-right .ma-infinitypush ul li ol, .ma-infinitypush-wrapper.ma-infinitypush-right .ma-infinitypush ol li ul, .ma-infinitypush-wrapper.ma-infinitypush-right .ma-infinitypush ol li ol {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.ma-infinitypush-wrapper .ma-infinitypush {
+  background-color: transparent !important;
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 5000;
+}
+.ma-infinitypush-wrapper .ma-infinitypush ul, .ma-infinitypush-wrapper .ma-infinitypush ol {
+  background-color: #f9f7f6;
+  list-style-type: none;
+  width: 250px;
+  overflow-x: hidden;
+}
+.ma-infinitypush-wrapper .ma-infinitypush ul li, .ma-infinitypush-wrapper .ma-infinitypush ol li {
+  height: 30px;
+  width: 100%;
+}
+.ma-infinitypush-wrapper .ma-infinitypush ul li a, .ma-infinitypush-wrapper .ma-infinitypush ol li a {
+  color: #404d5b;
+  display: block;
+  font-size: 14px;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: 1px;
+  height: 100%;
+  margin: 0;
+  padding: 6px 0 0 15px;
+}
+
+.ma-infinitypush-wrapper .ma-infinitypush ul li a:hover{background:#2cabe2; color: #fff;}
+
+.ma-infinitypush-wrapper .ma-infinitypush ul li ul, .ma-infinitypush-wrapper .ma-infinitypush ul li ol, .ma-infinitypush-wrapper .ma-infinitypush ol li ul, .ma-infinitypush-wrapper .ma-infinitypush ol li ol {
+  display: none;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  overflow-y: auto;
+}
+.ma-infinitypush-wrapper .ma-infinitypush ul li.ma-infinitypush-active-item, .ma-infinitypush-wrapper .ma-infinitypush ol li.ma-infinitypush-active-item {
+  background-color: #ccc;
+}
+.ma-infinitypush-wrapper .ma-infinitypush ul li.ma-infinitypush-active-item > a, .ma-infinitypush-wrapper .ma-infinitypush ol li.ma-infinitypush-active-item > a {
+  color: #252324 !important;
+  text-decoration: none !important;
+}
+.ma-infinitypush-wrapper .ma-infinitypush > ul, .ma-infinitypush-wrapper .ma-infinitypush > ol {
+  border-bottom: 1px solid #e9e9e9;
+}
+.ma-infinitypush-wrapper .ma-infinitypush.ma-infinitypush-sub-open {
+  overflow-y: hidden;
+}
+.ma-infinitypush-wrapper .ma-infinitypush .ma-infinitypush-inactive {
+  border-right: none !important;
+  border-left: none !important;
+  overflow-y: hidden !important;
+}
+.ma-infinitypush-wrapper .ma-infinitypush .ma-infinitypush-close-subnav {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 250px;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  padding: 0 !important;
+}
+</style>
+
+
+
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+
+<!--
+  <link href="https://tutorialcodeplay.com/assets/site/css/new_style.css" rel="stylesheet" type="text/css">    
+-->
+<style>
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:9;
+}
+
+.fixed-2 {
+    position: fixed !important;
+    top: 50px;
+    z-index: 1;
+}
+
+.ma-infinitypush-wrapper.ma-infinitypush-active-button{position: fixed !important; top:0; left:0; z-index: 99999999999999999999999}
+
+</style>
+
+
+
+
+    
+    
+    
+    
+<!--    
+<link href="https://tutorialcodeplay.com/assets/site/css/mobNavMenu.css" rel="stylesheet" type="text/css">    
+-->
+<style>
+/*
+	Menu
+		- positioning and sizing
+*/
+html.mmenu-opened,
+html.mmenu-opened body
+{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+html.mmenu-opened body
+{
+	position: relative;
+}
+.mmenu
+{
+	display: none;
+	/*width: 100%;*/
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+.mmenu,
+.mmenu *
+{
+	-webkit-text-size-adjust: none;
+	font-family: Arial, Helvetica, Garuda, sans-serif;
+	font-size: 14px;
+}
+.mmenu ul,
+.mmenu li,
+.mmenu li > a,
+.mmenu li > span
+{
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+.mmenu > ul
+{
+	padding: 10px 0 40px 0;
+}
+.mmenu .mmenu-hidden
+{
+	display: none;
+}
+html.mmenu-left .mmenu > ul > li
+{
+	padding-right: 65px;
+}
+html.mmenu-right .mmenu > ul > li
+{
+	padding-left: 65px;
+}
+html.mmenu-opened .mmenu.mmenu-opened
+{
+	display: block;
+}
+html.mmenu-opened .mmenu-page
+{
+	box-shadow: 0 0 20px rgba( 0, 0, 0, 0.8 );
+	background-color: inherit;
+	min-height: 100%;
+	position: absolute;
+	z-index: 1;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#mmenu-blocker
+{
+	display: none;
+}
+html.mmenu-opened #mmenu-blocker
+{
+	background: rgba( 255, 255, 255, 0.1 );
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+html.mmenu-opened .mmenu-page,
+html.mmenu-opened #mmenu-blocker
+{
+	-webkit-transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+	-moz-transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+	transition: left 0.5s ease, right 0.5s ease, margin 0.5s ease;
+}
+html.mmenu-left.mmenu-opened .mmenu-page,
+html.mmenu-left.mmenu-opened #mmenu-blocker
+{
+	margin-left: 0px;
+	left: 0%;
+}
+html.mmenu-left.mmenu-opening .mmenu-page,
+html.mmenu-left.mmenu-opening #mmenu-blocker
+{
+	margin-left: -65px;
+	left: 100%;
+}
+html.mmenu-right.mmenu-opened .mmenu-page,
+html.mmenu-right.mmenu-opened #mmenu-blocker
+{
+	margin-right: 0px;
+	right: 0%;
+}
+html.mmenu-right.mmenu-opening .mmenu-page,
+html.mmenu-right.mmenu-opening #mmenu-blocker
+{
+	margin-right: -65px;
+	right: 100%;
+}
+
+
+
+/*
+	Menu
+		- styling
+*/
+.mmenu
+{
+	/*background: #333;*/
+	background:#2f313e;
+}
+.mmenu *
+{
+	/*text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.5 );*/
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}
+.mmenu li
+{
+	border: none;
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #111;
+	position: relative;
+}
+.mmenu li:first-child
+{
+	border-top-width: 0;
+}
+.mmenu li > a,
+.mmenu li > span
+{
+	text-indent: 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 40px;
+	overflow: hidden;
+	padding-right: 5px;
+}
+.mmenu li > a,
+.mmenu li > span,
+.mmenu li > a:hover
+{
+	color: #999;
+	text-decoration: none;
+}
+/*
+.mmenu li.mmenu-selected > a,
+.mmenu li.mmenu-selected > span
+{
+	background: #222;
+}
+*/
+.mmenu li.mmenu-selected,
+.mmenu li.mmenu-selected > span
+{
+	background: white;
+}
+
+.mmenu li.mmenu-selected > a.mmenu-subopen
+{
+	background: transparent;
+}
+
+
+/*
+	Submenu
+		- open link
+*/
+.mmenu a.mmenu-subopen
+{
+	border-left: 1px solid #111;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	position: absolute;
+	right: 65px;
+	top: 0;
+	z-index: 2;
+}
+html.mmenu-right .mmenu a.mmenu-subopen
+{
+	right: 0;
+}
+.mmenu ul ul a.mmenu-subopen
+{
+	right: 0;
+}
+.mmenu a.mmenu-subopen.mmenu-fullsubopen
+{
+	width: 100%;
+}
+.mmenu a.mmenu-subopen + a,
+.mmenu a.mmenu-subopen + span
+{
+	padding-right: 45px;
+}
+
+
+/*
+	Submenu
+		- close link
+*/
+.mmenu a.mmenu-subclose
+{
+	background: #222;
+	text-indent: 40px;
+	padding-top: 10px;
+	margin-top: -10px;
+}
+
+
+/*
+	Submenu
+		- vertical
+*/
+.mmenu.mmenu-vertical ul ul
+{
+	display: none;
+	padding: 0 10px 10px 10px;
+}
+.mmenu.mmenu-vertical li.mmenu-opened > ul
+{
+	display: block;
+}
+.mmenu.mmenu-vertical ul ul li:last-child
+{
+	border-bottom-width: 0;
+}
+
+
+/*
+	Submenu
+		- horizontal
+*/
+.mmenu.mmenu-horizontal
+{
+	/*width: 200%;*/
+	width:79%;
+}
+.mmenu.mmenu-horizontal ul
+{
+	width: 100%;
+	margin-left: 0%;
+	float: left;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-transition: margin-left 0.5s ease;
+	-moz-transition: margin-left 0.5s ease;
+	transition: margin-left 0.5s ease;
+}
+.mmenu.mmenu-horizontal ul.mmenu-submenu
+{
+	display: none;
+}
+.mmenu.mmenu-horizontal ul.mmenu-submenu.mmenu-opened
+{
+	display: block;
+}
+.mmenu.mmenu-horizontal ul.mmenu-subopened
+{
+	margin-left: -50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+/*
+	Labels
+*/
+.mmenu li.mmenu-label
+{
+	background: #444;
+	font-size: 11px;
+	color: #ccc;
+	text-transform: uppercase;
+	text-indent: 20px;
+	line-height: 20px;
+}
+
+
+/*
+	Counters
+*/
+.mmenu em.mmenu-counter
+{
+	border-radius: 5px;
+	background: #555;
+	box-shadow: 0 0 2px rgba( 0, 0, 0, 0.3 );
+	font-size: 11px;
+	font-weight: bold;
+	font-style: normal;
+	color: #999;
+	text-indent: 0;
+	text-align: center;
+	text-shadow: none;
+	line-height: 22px;
+	display: block;
+	min-width: 20px;
+	height: 20px;
+	padding: 0;
+	position: absolute;
+	right: 105px;
+	top: 10px;
+}
+.mmenu em.mmenu-counter + a.mmenu-subopen
+{
+	padding-left: 35px;
+}
+.mmenu em.mmenu-counter + a.mmenu-subopen + a,
+.mmenu em.mmenu-counter + a.mmenu-subopen + span
+{
+	padding-right: 80px;
+}
+.mmenu em.mmenu-counter + a.mmenu-fullsubopen + a,
+.mmenu em.mmenu-counter + a.mmenu-fullsubopen + span
+{
+	padding-right: 70px;
+}
+
+
+/* at right or subsub */
+html.mmenu-right .mmenu em.mmenu-counter,
+.mmenu.mmenu-vertical ul ul em.mmenu-counter
+{
+	right: 40px;
+}
+
+
+/*
+	Arrows
+*/
+.mmenu a.mmenu-subopen:after,
+.mmenu a.mmenu-subclose:before
+{
+	content: '';
+	border: 4px solid rgba( 255, 255, 255, 0.3 );
+	border-left: none;
+	border-top: none;
+	display: block;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+}
+.mmenu a.mmenu-subopen:after
+{
+	right: 16px;
+	top: 16px;
+	-webkit-transform: rotate( 315deg );
+	transform: rotate( 315deg );
+}
+.mmenu a.mmenu-subclose:before
+{
+	left: 20px;
+	top: 25px;
+	-webkit-transform: rotate( 135deg );
+	transform: rotate( 135deg );
+}
+.mmenu.mmenu-vertical li.mmenu-opened > a.mmenu-subopen:after
+{
+	-webkit-transform: rotate( 45deg );
+	transform: rotate( 45deg );
+}
+html.mmenu-right .mmenu a.mmenu-subclose:before
+{
+	left: 85px;
+}
+
+
+/*
+	Menu
+		- positioning and sizing for larger screens
+*/
+@media all and (min-width: 500px) {
+	.mmenu.mmenu-vertical
+	{
+		width: 500px;
+	}
+	html.mmenu-right .mmenu.mmenu-vertical
+	{
+		left: auto;
+		right: 0;
+	}
+
+	.mmenu.mmenu-horizontal
+	{
+		width: 1000px;
+	}
+	html.mmenu-right .mmenu.mmenu-horizontal
+	{
+		left: auto;
+		right: -500px;
+	}
+
+	html.mmenu-left.mmenu-opening .mmenu-page,
+	html.mmenu-left.mmenu-opening #mmenu-blocker
+	{
+		left: 500px;
+	}
+	html.mmenu-right.mmenu-opening .mmenu-page,
+	html.mmenu-right.mmenu-opening #mmenu-blocker
+	{
+		right: 500px;
+	}
+}
+
+</style>    
+
+
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+
+
+<script async src="https://tutorialcodeplay.com/assets/site/js/jquery.mmenu.js"></script>
+
+
+
+
+<style>
+.newSidebar
+{
+	margin-top:-26px;
+	position:fixed !important;
+	width:230px;
+	z-index:1;
+}
+
+
+.newSidebar ul li .clsSubMenu:hover {
+    background: #e0e0e0;
+    color: #000;
+}
+.navbar
+{
+	height:44px;
+}
+
+
+#sysMenu strong {
+    text-decoration: none !important;
+    font-weight: unset !important;
+    font-size: 15px;
+}
+
+
+
+#sysMenu .clsMainMenu a {
+    line-height: 24px;
+    color: white;
+    cursor: default;
+}
+.main-area
+{
+    word-wrap: break-word;
+}
+
+#tophead
+{
+  -ms-content-zooming: none;
+  touch-action: none;
+}
+
+body
+{
+overscroll-behavior: none;
+}
+
+.clsSubMenu a
+{
+    cursor: default;
+}
+
+
+</style>
+    
+    
+    
+
+<script>
+
+$(document).ready(function(){
+windowSize();
+});
+
+
+$(window).load(function(){
+	
+
+	setTimeout(function(){
+		var sc=document.getElementById("scrollIntoView");
+		if(sc!=null)
+		{
+			sc.scrollIntoView({ 
+				behavior: 'smooth' 
+			});	
+		}
+	},100);
+
+});
+
+
+function windowSize()
+{
+	var windowHeight=window.innerHeight;
+	$("#menu").css({"max-height":windowHeight+"px","padding-top":"34px"});
+	$("#sysMenu").css({"height":windowHeight-44+"px"});
+}
+
+$( window ).resize(function() {
+  windowSize();
+});
+
+
+function openSideMobile()
+{
+
+setTimeout(function(){
+		var sc1=document.getElementById("scrollIntoViewMobile");
+		if(sc1!=null)
+		{
+			sc1.scrollIntoView({ 
+				behavior: 'smooth' 
+			});
+		}
+},100);
+
+ $("#menu").toggle();
+ return false;
+}
+
+
+
+var isRightOpen=false;
+function openTopSideMobile()
+{
+	setTimeout(function(){
+	
+		if(isRightOpen)
+		{
+			$("#navbar").hide();
+			isRightOpen=false;
+		}
+		else
+		{
+			$("#navbar").show();
+			isRightOpen=true;
+		}
+	
+	},10);
+	return false;
+}
+
+
+$('body').click(function(evt){
+  if(evt.target.id != "rightNavBtn")
+  {
+	$("#navbar").hide();
+	isRightOpen=false;
+  }
+});
+
+</script>
+
+
+
+<script>
+      $(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 72) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});  
+
+
+  $(window).scroll(function(){
+  var sticky2 = $('.sticky2'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 44) sticky2.addClass('fixed-2');
+  else sticky2.removeClass('fixed-2');
+
+});
+
+
+
+
+/*
+$(function(){
+    $('#inner-content-div').slimScroll({
+        height: '550px',
+		    railVisible: true,
+    railOpacity: 0.3,
+    wheelStep: 10,
+	position: 'right',
+	alwaysVisible: true,
+    });
+      //$("#primary-navigation").parent().hide();
+});
+
+
+
+$(window).load(function(){
+setTimeout(function(){
+$(".ma-infinitypush-button").css("right", "0px");
+},1);
+
+});
+*/
+
+</script>
+
+
+<script type="text/javascript">
+	$(function() {
+		//$('nav#menu').mmenu();
+	});
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav id="tophead" class="navbar navbar-default navbar-fixed-top" style="height:auto;">
+    <div class="container">
+        <div class="navbar-header">
+            <button onclick="openTopSideMobile();return false;" id="rightNavBtn" style="margin-right:4px;margin-top:5px;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  
+            <button onclick="openSideMobile();return false;" type="button" style="float:left;margin-left:5px;margin-top:5px;" class="navbar-toggle collapsed" data-toggle="collapse"  aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>		  
+		  
+            <!-- <a class="navbar-brand" href="#">Project name</a> -->
+
+
+            <a href="https://tutorialcodeplay.com/"><img style="width:61%;margin-left:60px;margin-top:5px;" class="img-responsive" src="https://tutorialcodeplay.com/assets/site/images/logo.png"/></a>
+
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+
+
+	
+		<li><a  href="https://tutorialcodeplay.com/html/html-introduction.html">HTML</a></li>
+	
+
+	
+		<li><a  href="https://tutorialcodeplay.com/css/css-introduction.html">CSS</a></li>
+	
+
+	
+		<li><a  href="https://tutorialcodeplay.com/javascript/javascript-introduction.html">JAVASCRIPT</a></li>
+	
+
+	
+		<li><a  href="https://tutorialcodeplay.com/jquery/jquery-introduction.html">JQUERY</a></li>
+	
+
+
+
+
+<!--
+                <li class="active"><a href="#">HTML</a></li>
+                <li><a href="#about">CSS</a></li>
+                <li><a href="#contact">Javascript</a></li>
+		<li><a href="#contact">jQuery</a></li>
+-->
+				
+				<!--
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+				-->
+            </ul>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+</nav>
+
+
+
+
+
+
+<nav id="menu" class="mmenu mmenu-horizontal" style="position:fixed;z-index: 8;">
+	 
+
+					
+			
+			
+			
+			<ul class='mmenu-opened' style='border-top:1px solid;margin-top:9px;'>		<li class="clsMainMenu"><a href="#"><strong>Basic</strong></a></li>
+		
+		 			<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-introduction.html">
+
+introduction</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/document-write.html">
+
+document.write</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-alert-method.html">
+
+alert</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-function.html">
+
+function</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-debugger.html">
+
+debugger</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-id-class-selector.html">
+
+selector</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-innerhtml-property.html">
+
+innerhtml</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-innertext-.html">
+
+innertext</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-textcontent.html">
+
+textcontent</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/console-window.html">
+
+console window</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-var.html">
+
+var</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/airthmetic-operators.html">
+
+airthmetic operators</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-comments.html">
+
+comments</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-conditions.html">
+
+conditions</a>
+
+</li>
+					<li style='background-color:#696A73;color:#FFF;' >
+<a class="clsSubMenu" style='color:#FFF;' 
+
+ id='scrollIntoViewMobile' 
+
+href="https://tutorialcodeplay.com/javascript/javascript-if-statement.html">
+
+if</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-switch-statement.html">
+
+switch</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/important-airthmetic-operators.html">
+
+arithmetic operators</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/assignment-operators-javascript.html">
+
+assignment </a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-for-loop.html">
+
+for</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-while-loop.html">
+
+while</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-do-while.html">
+
+do..while</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-array.html">
+
+array</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-object.html">
+
+object</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-for-of.html">
+
+for of</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-for-in.html">
+
+for..in</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-continue.html">
+
+continue</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-break.html">
+
+break</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-label.html">
+
+label</a>
+
+</li>
+					
+			
+			
+			
+					<li class="clsMainMenu"><a href="#"><strong>Methods</strong></a></li>
+		
+		 			<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/after-in-html.html">
+
+after()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/animate-in-javascript.html">
+
+animate()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/append-in-javascript.html">
+
+append()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/before-in-javascript.html">
+
+before()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/closest-in-javascript.html">
+
+closest()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/getattribute-in-javascript.html">
+
+getattribute()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/getattributenames-in-javascript.html">
+
+getattributenames()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/getattributenode-in-javascript.html">
+
+getattributenode()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/getelementsbyclassname.html">
+
+getelementsbyclassname()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/getelementsbytagname-in-javascript.html">
+
+getelementsbytagname()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/hasattribute-in-javascript.html">
+
+hasattribute()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/hasattributes.html">
+
+hasattributes()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/insertadjacenthtml.html">
+
+insertadjacenthtml()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/insertadjacenttext-in-javascript.html">
+
+insertadjacenttext()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/matches-in-javascript.html">
+
+matches()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/queryselector-in-javascript.html">
+
+queryselector()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/queryselectorall-in-javascript.html">
+
+queryselectorall()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/remove-in-javascript.html">
+
+remove()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/removeattribute-in-javascript.html">
+
+removeattribute()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/replacewith-in-javascript.html">
+
+replacewith()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/requestfullscreen-in-javascript.html">
+
+requestfullscreen()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/exitfullscreen-in-javascript.html">
+
+exitfullscreen()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/requestpointerlock-in-javascript.html">
+
+requestpointerlock()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/scrollintoview-in-javascript.html">
+
+scrollintoview()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/setattribute-in-javascript.html">
+
+setattribute()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/setattributenode-in-javascript.html">
+
+setattributenode()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/setattributens-in-javascript.html">
+
+setattributens()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/setcapture-in-javascript.html">
+
+setcapture()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/print-method-in-javascript.html">
+
+print()</a>
+
+</li>
+					
+			
+			
+			
+					<li class="clsMainMenu"><a href="#"><strong>Properties</strong></a></li>
+		
+		 			<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/accesskey-in-javascript.html">
+
+accesskey</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/attributes-in-javascript.html">
+
+attributes</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/childelementcount-in-javascript.html">
+
+childelementcount</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/children-in-javascript.html">
+
+children</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/classlist-in-javascript.html">
+
+classlist</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/classname-in-javascript.html">
+
+classname</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/clientheight-in-javascript.html">
+
+clientheight</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/clientleft--in-javascript.html">
+
+clientleft </a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/clienttop-in-javascript.html">
+
+clienttop</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/clientwidth-in-javascript.html">
+
+clientwidth</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/firstelementchild-in-javascript.html">
+
+firstelementchild</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/javascript-id-selector.html">
+
+id</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/lastelementchild-in-javascript.html">
+
+lastelementchild</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/localname-in-javascript.html">
+
+localname</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/name-in-javascript.html">
+
+name</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/outerhtml-in-javascript.html">
+
+outerhtml</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/previouselementsibling-in-javascript.html">
+
+previouselementsibling</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/scrollheight-in-javascript.html">
+
+scrollheight</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/scrollleft-property-in-javascript.html">
+
+scrollleft</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/scrolltop-property-in-javascript.html">
+
+scrolltop</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/scrollwidth-property-in-javascript.html">
+
+scrollwidth</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/tagname-property-in-javascript.html">
+
+tagname</a>
+
+</li>
+			
+	
+	
+	
+					
+			
+			
+			
+			<!--<ul class='mmenu-opened' style='border-top:1px solid;margin-top:9px;'>-->		<li class="clsMainMenu"><a href="#"><strong>Others</strong></a></li>
+		
+		 			<li  >
+<a class="clsSubMenu"  
+
+  
+
+href="https://tutorialcodeplay.com/javascript/condition-in-switch-statement.html">
+
+condition in swtich</a>
+
+</li>
+					<!--</ul>-->
+			
+	
+	
+	
+	
+	
+	
+					<!--</ul>-->
+				
+
+ </ul>
+</nav>
+
+  
+
+
+<!--
+<nav class="navbar navbar-inverse sticky">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+<li><a href="https://tutorialcodeplay.com/" class="home-icon"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+
+
+	
+		<li><a  href="https://tutorialcodeplay.com/html/html-introduction.html">HTML</a></li>
+	
+
+	
+		<li><a  href="https://tutorialcodeplay.com/css/css-introduction.html">CSS</a></li>
+	
+
+	
+		<li><a  href="https://tutorialcodeplay.com/javascript/javascript-introduction.html">JAVASCRIPT</a></li>
+	
+
+	
+		<li><a  href="https://tutorialcodeplay.com/jquery/jquery-introduction.html">JQUERY</a></li>
+	
+
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+-->
+
+
+<!-- ENDING LINE-->
+<!--MENU START-->
+
+
+
+<!--
+<div class="sidebar sticky2">
+<div id="inner-content-div">
+
+
+
+
+			<b>Basic</b>
+			<ul>			<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-introduction.html">Introduction</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/document-write.html">document.write</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-alert-method.html">alert</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-function.html">function</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-debugger.html">debugger</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-id-class-selector.html">selector</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-innerhtml-property.html">innerHTML</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-innertext-.html">innerText</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-textcontent.html">textContent</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/console-window.html">console window</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-var.html">var</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/airthmetic-operators.html">Airthmetic operators</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-comments.html">comments</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-conditions.html">conditions</a></li>
+					<li style='background-color:#696A73;color:#FFF;' ><a style='color:#FFF;' href="https://tutorialcodeplay.com/javascript/javascript-if-statement.html">if</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-switch-statement.html">switch</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/important-airthmetic-operators.html">Arithmetic Operators</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/assignment-operators-javascript.html">Assignment </a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-for-loop.html">for</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-while-loop.html">while</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-do-while.html">do..while</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-array.html">array</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-object.html">object</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-for-of.html">for of</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-for-in.html">for..in</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-continue.html">continue</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-break.html">break</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-label.html">label</a></li>
+					<b>Methods</b>
+						<li  ><a  href="https://tutorialcodeplay.com/javascript/after-in-html.html">after()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/animate-in-javascript.html">animate()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/append-in-javascript.html">append()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/before-in-javascript.html">before()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/closest-in-javascript.html">closest()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/getattribute-in-javascript.html">getAttribute()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/getattributenames-in-javascript.html">getAttributeNames()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/getattributenode-in-javascript.html">getAttributeNode()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/getelementsbyclassname.html">getElementsByClassName()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/getelementsbytagname-in-javascript.html">getElementsByTagName()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/hasattribute-in-javascript.html">hasAttribute()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/hasattributes.html">hasAttributes()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/insertadjacenthtml.html">insertAdjacentHTML()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/insertadjacenttext-in-javascript.html">insertAdjacentText()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/matches-in-javascript.html">matches()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/queryselector-in-javascript.html">querySelector()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/queryselectorall-in-javascript.html">querySelectorAll()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/remove-in-javascript.html">remove()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/removeattribute-in-javascript.html">removeAttribute()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/replacewith-in-javascript.html">replaceWith()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/requestfullscreen-in-javascript.html">requestFullscreen()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/exitfullscreen-in-javascript.html">exitFullscreen()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/requestpointerlock-in-javascript.html">requestPointerLock()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/scrollintoview-in-javascript.html">scrollIntoView()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/setattribute-in-javascript.html">setAttribute()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/setattributenode-in-javascript.html">setAttributeNode()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/setattributens-in-javascript.html">setAttributeNS()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/setcapture-in-javascript.html">setCapture()</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/print-method-in-javascript.html">print()</a></li>
+					<b>Properties</b>
+						<li  ><a  href="https://tutorialcodeplay.com/javascript/accesskey-in-javascript.html">accesskey</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/attributes-in-javascript.html">attributes</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/childelementcount-in-javascript.html">childElementCount</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/children-in-javascript.html">children</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/classlist-in-javascript.html">classList</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/classname-in-javascript.html">className</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/clientheight-in-javascript.html">clientHeight</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/clientleft--in-javascript.html">clientLeft </a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/clienttop-in-javascript.html">clientTop</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/clientwidth-in-javascript.html">clientWidth</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/firstelementchild-in-javascript.html">firstElementChild</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/javascript-id-selector.html">id</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/lastelementchild-in-javascript.html">lastElementChild</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/localname-in-javascript.html">localName</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/name-in-javascript.html">name</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/outerhtml-in-javascript.html">outerHTML</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/previouselementsibling-in-javascript.html">previousElementSibling</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/scrollheight-in-javascript.html">scrollHeight</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/scrollleft-property-in-javascript.html">scrollLeft</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/scrolltop-property-in-javascript.html">scrollTop</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/scrollwidth-property-in-javascript.html">scrollWidth</a></li>
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/tagname-property-in-javascript.html">tagName</a></li>
+			
+				</ul>
+			
+	
+			<b style="background-color:#000;">Others</b>
+					<b>Others</b>
+			<ul>
+			
+		
+					<li  ><a  href="https://tutorialcodeplay.com/javascript/condition-in-switch-statement.html">Condition in swtich</a></li>
+					</ul>
+		 
+	 
+</div>
+</div>
+-->
+<!-- MENU END-->
+
+
+
+
+
+
+<!--
+    <div class="newSidebar" style="">
+        <div id="inner-content-div">
+
+<nav id="sysMenu" class="mmenu mmenu-horizontal mmenu-opened" style="display:block;width:100% !important;border-top:1px solid;">
+    <ul class="mmenu-opened">
+
+                      <li><a href="#" class="clsMainMenu"><strong>Learn HTML System</strong></a></li>
+						  <li><a class="clsSubMenu" href="#">Learn HTML System</a></li>
+                          <li><a class="clsSubMenu" href="#">Learn CSS</a></li>
+                          <li><a class="clsSubMenu" href="#">Learn W3.CSS</a></li>
+                          <li><a class="clsSubMenu" href="#">Learn Colors</a></li> 
+                          <li><a class="clsSubMenu" href="#">Learn Bootstrap</a></li>
+                          <li><a class="clsSubMenu" href="#">Learn Icons</a></li> 
+                          <li><a class="clsSubMenu" href="#">Learn Graphics</a></li> 
+                          <li><a class="clsSubMenu" href="#">Learn How To</a></li> 
+                      
+                      <li><a class="clsMainMenu" href="#"><strong>Learn HTML</strong></a></li>
+					      <li><a class="clsSubMenu" href="#">Learn HTML</a></li>
+                          <li><a class="clsSubMenu" href="#">Learn CSS</a></li>
+                          <li><a class="clsSubMenu" href="#">Learn W3.CSS</a></li>
+                          <li><a class="clsSubMenu" href="#">Learn Colors</a></li> 
+                          <li><a class="clsSubMenu" href="#">Learn Bootstrap</a></li>
+                          <li><a class="clsSubMenu" href="#">Learn Icons</a></li> 
+                          <li><a class="clsSubMenu" href="#">Learn Graphics</a></li> 
+                          <li><a class="clsSubMenu" href="#">Learn How To</a></li>                                          
+
+    </ul>		
+</nav>		
+
+
+</div>
+
+</div>
+-->
+
+
+
+
+
+<div class="newSidebar" style="">
+  <div id="inner-content-div">
+
+    <nav id="sysMenu" class="mmenu mmenu-horizontal mmenu-opened" style="display:block;width:100% !important;border-top:1px solid;">
+	 
+
+					<ul class='mmenu-opened'>		<li class="clsMainMenu"><a href="#"><strong>Basic</strong></a>  </li>
+		
+		 			<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-introduction.html">
+
+introduction</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/document-write.html">
+
+document.write</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-alert-method.html">
+
+alert</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-function.html">
+
+function</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-debugger.html">
+
+debugger</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-id-class-selector.html">
+
+selector</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-innerhtml-property.html">
+
+innerhtml</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-innertext-.html">
+
+innertext</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-textcontent.html">
+
+textcontent</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/console-window.html">
+
+console window</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-var.html">
+
+var</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/airthmetic-operators.html">
+
+airthmetic operators</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-comments.html">
+
+comments</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-conditions.html">
+
+conditions</a>
+
+</li>
+					<li style='background-color:#696A73;color:#FFF;' >
+<a class="clsSubMenu" 
+
+id='scrollIntoView'
+ style='color:#FFF;' href="https://tutorialcodeplay.com/javascript/javascript-if-statement.html">
+
+if</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-switch-statement.html">
+
+switch</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/important-airthmetic-operators.html">
+
+arithmetic operators</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/assignment-operators-javascript.html">
+
+assignment </a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-for-loop.html">
+
+for</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-while-loop.html">
+
+while</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-do-while.html">
+
+do..while</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-array.html">
+
+array</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-object.html">
+
+object</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-for-of.html">
+
+for of</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-for-in.html">
+
+for..in</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-continue.html">
+
+continue</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-break.html">
+
+break</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-label.html">
+
+label</a>
+
+</li>
+							<li class="clsMainMenu"><a href="#"><strong>Methods</strong></a>  </li>
+		
+		 			<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/after-in-html.html">
+
+after()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/animate-in-javascript.html">
+
+animate()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/append-in-javascript.html">
+
+append()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/before-in-javascript.html">
+
+before()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/closest-in-javascript.html">
+
+closest()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/getattribute-in-javascript.html">
+
+getattribute()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/getattributenames-in-javascript.html">
+
+getattributenames()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/getattributenode-in-javascript.html">
+
+getattributenode()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/getelementsbyclassname.html">
+
+getelementsbyclassname()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/getelementsbytagname-in-javascript.html">
+
+getelementsbytagname()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/hasattribute-in-javascript.html">
+
+hasattribute()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/hasattributes.html">
+
+hasattributes()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/insertadjacenthtml.html">
+
+insertadjacenthtml()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/insertadjacenttext-in-javascript.html">
+
+insertadjacenttext()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/matches-in-javascript.html">
+
+matches()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/queryselector-in-javascript.html">
+
+queryselector()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/queryselectorall-in-javascript.html">
+
+queryselectorall()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/remove-in-javascript.html">
+
+remove()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/removeattribute-in-javascript.html">
+
+removeattribute()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/replacewith-in-javascript.html">
+
+replacewith()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/requestfullscreen-in-javascript.html">
+
+requestfullscreen()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/exitfullscreen-in-javascript.html">
+
+exitfullscreen()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/requestpointerlock-in-javascript.html">
+
+requestpointerlock()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/scrollintoview-in-javascript.html">
+
+scrollintoview()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/setattribute-in-javascript.html">
+
+setattribute()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/setattributenode-in-javascript.html">
+
+setattributenode()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/setattributens-in-javascript.html">
+
+setattributens()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/setcapture-in-javascript.html">
+
+setcapture()</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/print-method-in-javascript.html">
+
+print()</a>
+
+</li>
+							<li class="clsMainMenu"><a href="#"><strong>Properties</strong></a>  </li>
+		
+		 			<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/accesskey-in-javascript.html">
+
+accesskey</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/attributes-in-javascript.html">
+
+attributes</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/childelementcount-in-javascript.html">
+
+childelementcount</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/children-in-javascript.html">
+
+children</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/classlist-in-javascript.html">
+
+classlist</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/classname-in-javascript.html">
+
+classname</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/clientheight-in-javascript.html">
+
+clientheight</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/clientleft--in-javascript.html">
+
+clientleft </a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/clienttop-in-javascript.html">
+
+clienttop</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/clientwidth-in-javascript.html">
+
+clientwidth</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/firstelementchild-in-javascript.html">
+
+firstelementchild</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/javascript-id-selector.html">
+
+id</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/lastelementchild-in-javascript.html">
+
+lastelementchild</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/localname-in-javascript.html">
+
+localname</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/name-in-javascript.html">
+
+name</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/outerhtml-in-javascript.html">
+
+outerhtml</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/previouselementsibling-in-javascript.html">
+
+previouselementsibling</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/scrollheight-in-javascript.html">
+
+scrollheight</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/scrollleft-property-in-javascript.html">
+
+scrollleft</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/scrolltop-property-in-javascript.html">
+
+scrolltop</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/scrollwidth-property-in-javascript.html">
+
+scrollwidth</a>
+
+</li>
+					<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/tagname-property-in-javascript.html">
+
+tagname</a>
+
+</li>
+		 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+					<!--<ul class='mmenu-opened'>-->		<li class="clsMainMenu"><a href="#"><strong>Others</strong></a>  </li>
+		
+		 			<li  >
+<a class="clsSubMenu" 
+
+
+  href="https://tutorialcodeplay.com/javascript/condition-in-switch-statement.html">
+
+condition in swtich</a>
+
+</li>
+					<!--</ul>-->
+		 
+ 
+ 
+ 
+ 
+ 
+					<!--</ul>-->
+		 
+ </ul>
+ 
+ 
+ 
+    </nav>
+
+  </div>
+
+</div>
+
+
+
+
+
+<!-- NEW CODE -->
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/theme/neo.css" />
+
+  <link rel=stylesheet href="https://tutorialcodeplay.com/codemirror/doc/docs.css">
+
+<!--
+<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/codemirror.min.css" />
+-->
+<link  rel="stylesheet" href="https://tutorialcodeplay.com/codemirror/css/codemirror.css" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/addon/hint/show-hint.min.css" />	
+	
+<!--
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/codemirror.min.js"></script>	
+-->
+
+<script  src="https://tutorialcodeplay.com/codemirror/js/codemirror.js"></script>	
+
+<style>
+pre.CodeMirror-line {
+/*    padding: 42px;*/
+    /*margin-top: 6px;*/
+}
+
+</style>
+
+
+<script src="https://tutorialcodeplay.com/codemirror/addon/hint/show-hint.js"></script>
+<script src="https://tutorialcodeplay.com/codemirror/addon/hint/html-hint.js"></script>
+<script src="https://tutorialcodeplay.com/codemirror/addon/hint/xml-hint.js"></script>
+
+
+<script src="https://tutorialcodeplay.com/codemirror/mode/xml/xml.js"></script>
+
+<script src="https://tutorialcodeplay.com/codemirror/mode/javascript/javascript.js"></script>
+<script src="https://tutorialcodeplay.com/codemirror/mode/css/css.js"></script>
+
+<script src="https://tutorialcodeplay.com/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+<script src="https://tutorialcodeplay.com/convertToEditor.js"></script>
+
+<!--
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/addon/hint/show-hint.min.js"></script>	
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/addon/hint/html-hint.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/addon/hint/xml-hint.min.js"></script>
+
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/mode/xml/xml.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/mode/javascript/javascript.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/mode/css/css.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/mode/htmlmixed/htmlmixed.min.js"></script>
+-->	
+
+	
+<!--Disable Scroll bar for codemirror editor START-->
+<style> 
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto;
+}
+.CodeMirror-cursor { display: none !important }
+</style>
+<!--Disable Scroll bar for codemirror editor END-->
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+<!-- NEW CODE ENDS HERE -->	
+
+<div class="content-section fl">
+
+<div class="row">
+<div class="col-md-12 col-sm-12">
+	<h1>if statement in javascript</h1>
+	
+	
+	
+
+	
+	
+	    <div class="top-btn-section">
+        <a href="javascript:void(0)" id="previous_1" class="fl btn-1">Previous</a>
+        <a href="javascript:void(0)" id="next_1" class="fr btn-2">Next</a>
+    </div>
+    </div>
+		   <div class="col-md-12 col-sm-12 main-area">
+
+<style>
+@media only screen and (min-width: 767px){
+	.img-responsive{
+		width: 48%;
+	}
+}
+</style>
+
+<!--START -------------------->
+
+<h1>if statement in javascript</h1>
+<p><b>if</b> statement is used to check the specified condition and if it is correct <b>if</b> block statements is executed and if false execute the next statement.</p>
+
+
+
+
+<div class="tutorial-exaple">
+    <h3>Syntax</h3>
+    <div class="exaple-inner">
+<textarea data-language="javascript" class="js_editor" name="code">
+if(condition)
+{
+ statement 1;
+ statement 2;
+ -----
+ -----
+ statement n;
+}</textarea>
+</div>
+</div>
+
+<h3>Flowchart</h3>
+
+<figure>
+  <img class="img-responsive" src="//tutorialcodeplay.com/uploads/tutorial_images/if_statement_flow_chart.png" />
+  <figcaption style="text-align:center;">if statement flowchart</figcaption>
+</figure>
+
+
+
+
+
+
+
+
+<div class="tutorial-exaple">
+<h3>Example</h3>
+<div class="exaple-inner">
+<!--EEE1-->
+<textarea data-language="htmlmixed" class="js_editor" name="code">
+<button onclick="fun_name();">Click me</button>
+	
+<script>
+function fun_name()
+{
+ var a=50;
+ var b=30;
+ if(a>b)
+ {
+  alert("'a' is bigger than 'b'");
+ }
+ alert("Finished");
+}
+</script></textarea>
+<a target="_blank" href="//tutorialcodeplay.com/tryit/javascript-if-statement-example" class="fl btn-2">Try Yourself</a>
+</div>
+</div>
+
+<h3>Execution flow of above example - <a target="_blank" href="//tutorialcodeplay.com/uploads/tutorial_images/if_statement_execution.png">image explanation</a></h3>
+<div class="list-item">
+    <ul>
+        <li>Variable a and b is created and value 50 and 30 are assigned (var a=50; var b=30;).</li>
+        <li>A condition (a>b) is checked, and it is true (50>30).</li>
+		<li>Alert statement inside <b>if</b> block is executed (alert("'a' is bigger than 'b'");).</li>
+		<li><b>if</b> statement ends and the control execute the next statement (alert("Finished");)</li>
+    </ul>
+</div>
+
+<hr/>
+
+
+
+
+<h1>if..else statement in javascript</h1>
+<p><b>if</b> statement is used to check the specified condition and if it is correct <b>if</b> block statements is executed and if false execute the <b>else</b> block statements.</p>
+
+
+ <div class="tutorial-exaple">
+    <h3>Syntax</h3>
+    <div class="exaple-inner">
+<textarea data-language="javascript" class="js_editor" name="code">
+if(condition)
+{
+ statement 1;
+ statement 2;
+ -----
+ -----
+ statement n;
+}
+else
+{
+ statement 1;
+ statement 2;
+ -----
+ -----
+ statement n;
+}</textarea>
+</div>
+</div>
+
+
+<h3>Flowchart</h3>
+
+
+<figure>
+  <img class="img-responsive" src="//tutorialcodeplay.com/uploads/tutorial_images/if_else_syntax.png" />
+  <figcaption style="text-align:center;">if..else statement flowchart</figcaption>
+</figure>
+
+
+
+
+ <div class="tutorial-exaple">
+    <h3>Example</h3>
+    <div class="exaple-inner">
+<!--EEE2-->
+<textarea data-language="htmlmixed" class="js_editor" name="code">
+<button onclick="fun_name();">Click me</button>
+	
+<script>
+function fun_name()
+{
+ var a=50;
+ var b=30;
+ if(a>b)
+ {
+  alert("'a' is bigger than 'b'");
+ }
+ else
+ {
+  alert("'a' is lesser than 'b'");
+ }
+ alert("Finished");
+}
+</script></textarea>
+    <a target="_blank" href="//tutorialcodeplay.com/tryit/javascript-if-else-statement-example" class="fl btn-2">Try Yourself</a>
+
+	</div>
+</div>
+
+
+<h3>Execution flow of above example - <a target="_blank" href="//tutorialcodeplay.com/uploads/tutorial_images/if_else_example.png">image explanation</a></h3>
+<div class="list-item">
+    <ul>
+        <li>Variable a and b is created and value 50 and 300 are assigned (var a=50; var b=300;).</li>
+        <li>A condition (a>b) is checked, and it is false (50>300), so the control moves from if block to else block.</li>
+		<li>Alert statement inside <b>else</b> block is executed (alert("'a' is lesser than 'b'");).</li>
+		<li><b>if else</b> statement ends and the control execute the next statement (alert("Finished");)</li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+<hr/>
+
+
+
+
+<h1>if..else if...else statement in javascript</h1>
+<p>In a program after <b>if</b> statement any number of <b>else if</b> statement can be followed.</p>
+<p>In here <b>if</b> statement is used to check the specified condition and if it is correct <b>if</b> block statements is executed, and if false it checks the <b>else if</b> condition if it is correct it execute the <b>else if</b> block statements, if there is an <b>else if</b> statement again the process goes on and if no conditions are satisfied the <b>else</b> block will be executed.</p>
+
+
+<div class="tutorial-exaple">
+    <h3>Syntax</h3>
+    <div class="exaple-inner">
+<textarea data-language="javascript" class="js_editor" name="code">
+if(condition)
+{
+ statement 1;
+ statement 2;
+ -----
+ -----
+ statement n;
+}
+else if(condition)
+{
+ statement 1;
+ statement 2;
+ -----
+ -----
+ statement n;
+}
+ -----
+ -----
+ ----- n
+else
+{
+ statement 1;
+ statement 2;
+ -----
+ -----
+ statement n;
+}</textarea>
+</div>
+</div>
+<h3>Flowchart</h3>
+
+
+<figure>
+  <img class="img-responsive" src="//tutorialcodeplay.com/uploads/tutorial_images/if_else_if_else_syntax.png" />
+  <figcaption style="text-align:center;">if..else if else statement flowchart</figcaption>
+</figure>
+
+
+
+
+ <div class="tutorial-exaple">
+    <h3>Example</h3>
+    <div class="exaple-inner">
+<!--EEE3-->
+<textarea data-language="htmlmixed" class="js_editor" name="code">
+<button onclick="fun_name();">Click me</button>
+	
+<script>
+function fun_name()
+{
+ var a=50;
+ var b=30;
+ if(a>b)
+ {
+  alert("'a' is bigger than 'b'");
+ }
+ else if(a<b)
+ {
+  alert("'b' is bigger than 'a'");
+ }
+ else
+ {
+  alert("'a' and 'b' are equal");
+ }
+ alert("Finished");
+}
+</script></textarea>
+    <a target="_blank" href="//tutorialcodeplay.com/tryit/javascript-if-else-else-if-else-statement-example" class="fl btn-2">Try Yourself</a>
+
+	</div>
+</div>
+
+
+
+<h3>Execution flow of above example - <a target="_blank" href="//tutorialcodeplay.com/uploads/tutorial_images/if_else_if_else_example.png">image explanation</a></h3>
+<div class="list-item">
+    <ul>
+        <li>Variable a and b is created and value 50 and 300 are assigned (var a=50; var b=300;).</li>
+        <li>A condition (a>b) is checked, and it is false (50>300), so the control moves from if block to else if block.</li>
+		<li>A condition (a<b) is checked, and it is true (50<300).</li>
+		<li>Alert statement inside <b>else if</b> block is executed (alert("'b' is bigger than 'a'");).</li>
+		<li><b>else if</b> statement ends and the control execute the next statement (alert("Finished");)</li>
+    </ul>
+</div>
+
+
+
+
+<hr/></div>
+<div class="col-md-12 col-sm-12">
+<div class="top-btn-section">
+        <a href="javascript:void(0)" id="previous_2" class="fl btn-1">Previous</a>
+        <a href="javascript:void(0)" id="next_2" class="fr btn-2">Next</a>
+    </div>
+</div>
+  
+
+
+
+<div id="bottomAds" style="clear:both;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6969637115269724"
+     data-ad-slot="7516076918"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+
+
+
+</div>    <!--[if lt IE 9]>
+        <script async src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script async src="https://oss.maxcdn.com/libs/respond.https://tutorialcodeplay.com/assets/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script async src="https://tutorialcodeplay.com/assets/site/js/jquery.ma.infinitypush.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+$( "#previous_1" ).click(function() {
+	var file_name = document.URL;
+	file_name = file_name.split('/').pop();
+	var action = "P";
+	validateAndGo(file_name,action);
+});
+$( "#next_1" ).click(function() {
+	var file_name = document.URL;
+	file_name = file_name.split('/').pop();
+	var action = "N";
+	validateAndGo(file_name,action);
+});
+$( "#previous_2" ).click(function() {
+	var file_name = document.URL;
+	file_name = file_name.split('/').pop();
+	var action = "P";
+	validateAndGo(file_name,action);
+});
+$( "#next_2" ).click(function() {
+	var file_name = document.URL;
+	file_name = file_name.split('/').pop();
+	var action = "N";
+	validateAndGo(file_name,action);
+});
+function validateAndGo(file_name,action)
+{
+	  $.post('https://tutorialcodeplay.com/home/nextpages',{file_name:file_name,action:action}, function(data){
+				 var res = JSON.parse(data);
+				 
+				 if(res.main_file != "ERROR")
+				 {
+					res.program_name = res.program_name.toLowerCase();
+					res.main_file = res.main_file.toLowerCase();
+					window.location = "https://tutorialcodeplay.com/"+res.program_name+"/"+res.main_file;
+				 }
+            });
+}
+</script>
+
+<div class="footer">
+    
+<div class="footer-bottom">
+    
+    <P>Tutorialcodeplay is an extensive resource to teach Web Development, Programming and Technical stuff from ground up to Professional Level.</P>
+    <P>Copyright-2019 by Tutorialcodeplay. All Rights Reserved.</P>
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--NEW Added START-->
+<style>
+body {
+  /*min-height: 2000px;*/
+  padding-top: 70px;
+}
+
+#navbar .nav > li > a {
+    position: relative;
+    display: block;
+    /*padding: 10px 15px;*/
+    background: #2f313e;
+    color: white !important;
+}
+
+</style>
+
+
+
+
+
+
+
+
+<!--NEW Added END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84280235-2"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+			  gtag('config', 'UA-84280235-2');			  
+			</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+﻿<html>
+
+<head>
+    <title>Строки, конкатенация</title>
+
+
+
+</head>
+
+<body>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String</title>
+</head>
+
+<body>
+    <!--
+
+        Строки - тип данных для представления текста (в строку может входить любой UNICODE символ)
+        В JavaScript (как и в большинстве других языков программирования) строка является набором
+        символов — букв, цифр, знаков пунктуации и пробелов. Чтобы JavaScript знал,
+        где начинается и заканчивается строка, ее берут в кавычки. 
+        
+        Конкатенация (лат. concatenatio «присоединение цепями; сцепле́ние») — 
+        операция склеивания объектов линейной структуры, обычно строк.
+
+-->
+    <script>
+
+        var string1 = "Hello ";
+        var string2 = 'World';
+
+        var resString = string1 + string2; // конкатенация значений переменных string1 и string2
+
+        document.write(string1 + "<br/>");
+        document.write(string2 + "<br/>");
+        document.write(resString + "<br/><hr>");
+
+        var str = "15"; // строка
+        var a = 15;  // число
+
+        // Конкатенация
+        // Произошло неявное преобразование значения типа Number в тип String.
+        // Значение в переменной (a) неявно преобразуется в строку (т.е в значение типа String)
+        // и далее над этой строкой-числом производится операция конкатенации.
+
+        document.write(str + a + "<br/>");
+
+        // Произошло неявное преобразование значения типа String в тип Number.
+        // Значение в переменной str неявно преобразуется в число (т.е в значение типа Number)
+        // и далее над этим числом производится арифметическая операция.
+        document.write(str - a + "<br/>");
+        document.write(str * "2" + "<br/>");
+        document.write(str / "2" + "<br/>");
+
+    </script>
+</body>
+
+</html>

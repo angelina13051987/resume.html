@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wheel event</title>
+    <style>
+        #text {
+            margin: 40px;
+            width: 200px;
+            height: 60px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="text">
+        При прокрутке колёсика мыши над этим элементом, он будет масштабироваться.
+    </p>
+    <script>
+        let scale = 1;
+             console.log( 'text -' + text.innerHTML)
+        
+        function addOnWheel(elem, handler) {
+            elem.addEventListener("wheel", handler);
+        }
+        addOnWheel(text, (e) => {
+            // Масштабирование при помощи CSS
+            if (e.deltaY > 0) scale += 0.05;
+            else scale -= 0.05;
+
+            text.style.transform = 'scale(' + scale + ')';
+            // Отмена прокрутки
+            e.preventDefault();
+        });
+    </script>
+
+</body>
+
+</html>

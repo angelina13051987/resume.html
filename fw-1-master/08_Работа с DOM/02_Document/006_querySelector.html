@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+        window.onload = () => {
+            console.time('time1')
+            // получение всех элементов <p>
+           // const paragraphs = document.querySelector("div > div");
+             const paragraphs = document.querySelectorAll(".elements");
+            // paragraphs.style.backgroundColor = "green"
+
+                    paragraphs.forEach(item => {
+                        item.style.color = "green"
+                    });
+        
+       console.timeEnd('time1')
+        }
+
+    </script>
+</head>
+
+<body>
+    <p style="color:yellow" class="elements">Hello world!!!</p>
+    <p class="elements">Hello world!!!</p>
+    <p class="elements">Hello world!!!</p>
+    <p class="elements">Hello world!!!</p>
+    <div class="elements">Hello world!!!
+        <div>test</div>
+    </div>
+</body>
+
+</html>

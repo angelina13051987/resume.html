@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод match</title>
+    <script type="text/javascript">
+        // match() - принимает регулярное выражение и возвращает массив с результатами поиска.
+        const text = "1 плюс 10 равно 3";
+        const res = text.match(/\d/); // возвращает массив ['1', '2', '3']
+        document.write(res);
+
+        const text2 = "Текст 123 для тестирования 12 примера";
+        const res2 = text2.match(/\d\d\d/);
+
+        document.write(`<br />res2 =  ${res2}`);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

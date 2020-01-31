@@ -1,0 +1,44 @@
+﻿<!--
+            Объект – это составной тип данных, 
+            он объединяет множество значений в единый модуль и 
+            позволяет сохранять и извлекать значения по их именам.
+
+            Создание объекта через блок инициализации:
+            var имяОбьекта = { имяСвойства: значениеСвойства,
+                 имяСвойства: значениеСвойства }
+-->
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script>
+
+        // Создание объекта через блок инициализации.
+        var instance = { property1: 111, property2: 222 };z
+
+        
+        // Вывод свойств.
+        document.write("<p>instance.property1 = " + instance.property1 + "</p>");
+        document.write("<p>instance.property2 = " + instance.property2 + "</p>");
+
+        document.write("<hr/>");
+
+        // Присвоение новых значений свойствам.
+        instance.property1 = 333;       
+        instance["property2"] = 555;    
+      
+        // Вывод значений свойств.
+        document.write("<p>instance.property1 = " + instance.property1);
+        document.write("<p>instance.property2 = " + instance.property2);
+
+        document.write("<hr/>");
+
+        // При вызове объекта нужно обращатся к свойству, а не имени обьекта 
+        document.write("<p>instance = " + instance);
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

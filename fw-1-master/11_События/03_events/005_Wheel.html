@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wheel event</title>
+    <style>
+        #container {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background: #0FF;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+
+<body>
+        Прокрутка: <span id="delta">0</span> px
+        <div id="container">
+            Прокрути надо мной.
+        </div>
+    <script>
+        // При прокрутке срабатывает событие onscroll. Оно произойдёт при любой прокрутке, в том числе через клавиатуру, но только на прокручиваемых элементах.
+        // wheel является событием мышки. Оно генерируется над любым элементом при передвижении колеса мыши. При этом не важно, прокручиваемый он или нет. 
+        // Событие onscroll происходит после прокрутки, а onwheel – до прокрутки, поэтому в нём можно отменить саму прокрутку (действие браузера).
+
+        let elem = document.querySelector('container')[0];
+        if (elem.addEventListener) {
+            // Проверка наличия onwheel в браузере
+            if ('onwheel' in document) {
+                // IE9+, FF17+, Ch31+
+                elem.addEventListener("wheel", onWheel);
+            } else if ('mousewheel' in document) {
+                // устаревший вариант события
+                elem.addEventListener("mousewheel", onWheel);
+            } else {
+                // Firefox < 17
+                elem.addEventlistener("MozMousePixelScroll", onWheel);
+            }
+        } else { // IE8-
+            elem.attachEvent("onmousewheel", onWheel);
+        }
+
+        function onWheel(el) {
+            console.log(e);
+            // wheelDelta не дает возможность узнать количество пикселей
+            let delta = e.deltaY
+            let info = document.getElementById('delta');
+            info.innerHTML = +info.innerHTML + delta;
+        }
+    </script>
+</body>
+
+</html>

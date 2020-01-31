@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaSript Тема урока</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../globalfile/style/normalize.css">
+    <link rel="stylesheet" href="../../globalfile/style/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logotype"><a href="#"><img src="./image/philip-logo-2.png" alt="logo"></a></div>
+        <ul style="margin: 0;
+        font-size: 1.2em;">
+            <li> <a href="#block1">Тема сгодняшнего урока</a></li>
+            <li> <a href="#block3">Презентация к уроку</a></li>
+            <li> <a href="#block4">Классная работа</a></li>
+            <li> <a href="#block5">Домашняя работа</a></li>
+            <li> <a href="#block6">Дополнительные материалы</a></li>
+            <li> <a href="#block7">Подготовка к следующему уроку</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="block1" class="blocks-standart">
+            <div class="curse">JavaSript</div>
+            <div class="name-lesson">Функции в JavaSript</div>
+        </section>
+        <section id="block2" class="blocks-standart">
+            <article>Сегодня на уроке</article>
+            <ol>
+                <li>Зачем нужны функции?</li>
+                <li>Как Выглядит функия</li>
+                <li>Работа с функциями</li>
+            </ol>
+        </section>
+
+
+
+
+        <section id="block3" class="blocks-standart">
+            <div class="presentation-block">
+                <header>Зачем нужны функции?</header>
+                <article>
+                    <div>
+                        Функции — это механизм для многократного использования частей кода. Они позволяют запускать один
+                        и тот же код из разных мест программы без необходимости его копировать. Кроме того, если вы
+                        «спрячете» сложные фрагменты кода внутри функций, вам будет легче сосредоточиться на
+                        проектировании программы — так вы будете налаживать взаимодействие между функциями, а не
+                        барахтаться в мелких деталях, из которых состоит код этих фрагментов. Организация кода в виде
+                        небольших, легко контролируемых частей позволяет видеть общую картину и думать о строении
+                        программы на более высоком уровне. Функции очень удобны, когда нужно многократно выполнять в
+                        программе некие расчеты или другие действия. Мы уже пользовались готовыми функциями, такими как
+                        Math.random, Math.ﬂ
+                        oor, alert, prompt и conﬁ rm.
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="presentation-block">
+                <header>Function</header>
+                <article>
+                    <div>
+                        Код внутри фигурных скобок называется телом функции — аналогично циклам, где код в фигурных скобках зовется телом цикла. 
+                    </div>
+                    <div>
+                        <table>
+                           
+                            <tr><td>1</td><td><span class="blue">function</span>  () { </td></tr>
+                            <tr><td>2</td><td><span class="blue">console</span>.log("Делаем что-то"); </td></tr>
+                            <tr><td>3</td><td>}</td></tr>
+                            
+                        </table>
+                    </div>
+                    <div>
+                        Функция которая выводит в консоль тест Привет!
+                        <table>
+                           
+                            <tr><td>1</td><td><span class="blue">function</span> hello  () { </td></tr>
+                            <tr><td>2</td><td><span class="blue">console</span>.log("Привет! "); </td></tr>
+                            <tr><td>3</td><td>}</td></tr>
+                            
+                        </table>
+                    </div>
+
+                    <div>
+                        Чтобы запустить код функции (то есть ее тело), нужно эту функцию вызвать. Для этого укажите ее имя, а следом — открывающую и закрывающую скобки, вот так:
+                        <table>
+                           
+                            <tr><td>4</td><td>hello();</td></tr>
+                            <tr><td>5</td><td></td></tr>
+                            <tr><td>3</td><td></td></tr>
+                            
+                        </table>
+                    </div>
+                </article>
+            </div>
+           
+        </section>
+        <section id="block4" class="blocks-standart">
+            <header>Классная работа</header>
+            <article>
+                <ol>
+                    <li>Создайте функцию калькулятор. При делении на 0 должна выдаватся пользователю ошибка в консоль и в диалоговом окне</li>
+                   
+                </ol>
+            </article>
+        </section>
+        <section id="block5" class="blocks-standart">
+            <header>Домашнее задание</header>
+            <article>
+                <ol>
+                    <li>
+                        Напиши функцию map(fn, array), которая принимает на вход функцию и массив, и обрабатывает каждый элемент массива этой функцией, возвращая новый массив.
+                     
+                    </li>
+                    <li>Перепишите функцию, используя оператор '?' или '||'
+                        <br>
+                        Следующая функция возвращает true, если параметр age больше 18.
+
+В ином случае она задаёт вопрос confirm и возвращает его результат. <br>
+<table>
+    <tr><td>1</td><td>function checkAge(age) {</td></tr>
+    <tr><td>2</td><td> if (age > 18) {</td></tr>
+    <tr><td>3</td><td> return true;</td></tr>
+    <tr><td>4</td><td>} else {</td></tr>
+    <tr><td>5</td><td> return confirm('Родители разрешили?');</td></tr>
+    <tr><td>6</td><td>} }</td></tr>
+</table>
+                    </li>
+               
+                </ol>
+            </article>
+        </section>
+        <section id="block6" class="blocks-standart">
+            <header>Дополнитнльные материалы</header>
+            <article>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/function-basics" target="_blank">Функции</a>
+                </div>
+                
+            </article>
+        </section>
+        <section id="block7" class="blocks-standart">
+            <header>Познакомится с материалами к началу следующего занятия № 5 Объекты </header>
+            <article>
+                <div class="red ">
+                    JavaSript для детей - ст 70 - 83
+                </div>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/object" target="_blank">Обьъекты</a>
+                </div>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/object-methods" target="_blank">This</a>
+                </div>
+                <div class="link">
+                        <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Math</a>
+                </div>
+                
+                <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sfqsBd6Iwx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xg85D982cCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UACTcQ89TVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <span class="red"> После выполнения домашней работы отправь на проверку!!!</span>
+            <br>
+            Что делать елси я не знаю с чего мне начать или у меня есть дополнительные вопросы?
+            <ol>
+                <li>Открой браузер перейди <a href="https://google.com" target="_blank" class="red">по ссыке</a>,
+                    попробуй найти ответ здесь на свои вопросы</li>
+                <li>Если не нашел, то пиши своим отдногорупникам в чат, может кто-то уже сталкивался с этим:) <a
+                        href="#" target="_blank" class="red">ссылка</a> </li>
+                <li>Если все еще твой вопрос не решен пиши мне в телеграмм "@Philip7e"</li>
+            </ol>
+        </div>
+    </footer>
+    <script src="../../globalfile/code/index.js"></script>
+</body>
+
+</html>

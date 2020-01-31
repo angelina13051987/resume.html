@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!--Обработчик события click-->
+        <input type="button" name="button1" value="Click me" onclick="alert('Hello')" />
+
+        <!--Если обработчик состоит из нескольких инструкций, они должны быть отделены ';'-->
+        <input type="button" name="button1" value="Click me"
+            onclick="if (window.counter) counter++; else counter = 1; this.value = counter;" />
+    
+        <form method="GET" action="./index.php">
+            <input type="text" name="firstName" />
+            <br />
+            <!--Если обработчик возвращает false действие отменяется.-->
+            <input type="reset" onclick="return confirm('Вы уверены?')" />
+    
+            <!--Обработчик установлен как функция из тега script-->
+            <input type="submit" onclick="validate()" />
+        </form>
+        <script>
+            const validate = () => {
+                // проверка формы.
+                alert("validate");
+            }
+        </script>
+</body>
+</html>

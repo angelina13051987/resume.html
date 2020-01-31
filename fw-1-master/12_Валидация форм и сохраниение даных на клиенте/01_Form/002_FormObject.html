@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Работа с HTML формой</title>
+</head>
+<body>
+    <form name="myform">
+        Имя <input type="text" value=" " name="fName" /><br />
+        Фамилия<input type="text" value=" " name="lName" /><br />
+        Возраст<input type="text" value=" " name="age" /><br />
+        <input type="button" value="Регистрация" />
+    </form>
+
+    <script>
+        // получение формы по имени
+        const f = document.myform; 
+
+        // получение элементов по имени.
+        f.fName.value = "text";
+        f.lName.value = "text";
+        f.age.value = "text";
+
+</script>
+</body>
+</html>

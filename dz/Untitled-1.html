@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Создайте 3 переменные   x = 6, y = 14, и z = 4: Выполните и отобразите результат следующих операций для этих переменных:*/
+        var x = 6,
+            y = 14,
+            z = 4;
+        document.write("Исходное значение переменных: x = " + x + " y = " + y + " z = " + z);
+        x += y - x++ * z;
+        document.write("<p>" + "Результат выполнения операций <u>x += y - x++ * z</u> : x = " + x + " y = " + y + " z = " + z);
+        z = --x - y * 5;
+        document.write("<p>" + "Результат выполнения операций <u>z = -- x - y * 5</u> : x = " + x + " y = " + y + " z = " + z);
+        y /= x + 5 % z;
+        document.write("<p>" + "Результат выполнения операций <u>y /= x + 5 % z </u> : x = " + x + " y = " + y + " z = " + z);
+        z = x++ + y * 5;
+        document.write("<p>" + "Результат выполнения операций <u>z = x++ + y * 5</u> : x = " + x + " y = " + y + " z = " + z);
+        x = y - x++ * z;
+        document.write("<p>" + "Результат выполнения операций <u>x = y - x++ * z</u> : x = " + x + " y = " + y + " z = " + z);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<script>
+//способ 1. добавление прототипа на объеты
+
+const animal = {
+    say: function() {
+        console.log(`${this.name}  goes  ${this.voice}`)
+    }
+};
+/*
+const dog = {
+    name : 'dog',
+    voice : 'woof',
+};
+
+Object.setPrototypeOf(dog, animal); // ! не жедлателен  слишком затратный
+
+const cat = {
+    name : 'cat' ,
+    voice : 'meow',
+};
+*/
+//Способ 2 добавление прототипа
+/*
+const animal = {
+    say: function() {
+        console.log(`${this.name}  goes  ${this.voice}`)
+    }
+};
+
+const dog = Object.create(animal);
+dog.name = 'dog';
+dog.voice = 'woof'
+*/
+//способ 3
+/*
+function createAnimal (name, voice) {
+    const rez = Object.create(animal)
+    rez.name = name;
+    rez.voice = voice;
+    return rez
+}
+
+const dog = createAnimal('Dog', 'woof');
+const cat = createAnimal('Cat', 'meow');
+*/
+//самый предпочтительный 
+/*
+function Animal (name, voice) {
+   
+    this.name = name;
+    this.voice = voice;
+   
+}
+Animal.prototype.sey = function() {
+        console.log(`${this.name}  goes  ${this.voice}`)
+    };
+
+const dog = new Animal('Dog', 'woof');
+const cat = new Animal('Cat', 'meow');
+*/
+</script>

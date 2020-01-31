@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var horizCount = 10; // определяем сколько символов будет занимать по горизонтали
+        var vertCount = 5; // определяем сколько символов будет занимать по горизонтали
+        var star = '*'; // символ звездочки
+        var whitespace = ' '; // символ пробела
+
+        // Делаем цикл сколько надо всего линий сделать по вертикали
+        for (var i = 0; i < vertCount; ++i) {
+            var str = '';
+
+            // если это первая линия или последняя, то рисуем чисто звездочки
+            if (i == 0 || i == vertCount - 1) {
+                for (var j = 0; j < horizCount; ++j) {
+                    str += star;
+                }
+                // если это ряд в середине, то в начале и конце рисуем звезды
+                // а в середине - пробелы
+            } else {
+                str = star;
+                for (var j = 0; j < horizCount - 2; ++j) {
+                    str += whitespace * 8;
+                }
+                str += star;
+            }
+            // вывод на консоль итога
+            document.write(str + "</br>");
+        }
+    </script>
+</body>
+
+</html>

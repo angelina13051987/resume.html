@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+      <script> 
+        let prevValue = "";
+        let currValue = "";
+        let act;
+         //display value 
+        function dis(val) { 
+            document.getElementById("result").value += val 
+            currValue += val;
+        } 
+
+        function doAction(val) {
+            prevValue = currValue;
+            currValue = "";
+            act = val;
+            document.getElementById("result").value = "" 
+         }
+           
+         //evaluates the digit and return result 
+        function solve() { 
+            let res;
+            switch (act) {
+                case "*":
+                    res = prevValue * currValue;
+                    break;
+                case "+":
+                    res = parseFloat(prevValue) + parseFloat(currValue);
+                    break;
+                case "-":
+                    res = prevValue - currValue;
+                    break;
+                case "/":
+                    res = (currValue == 0) ? "Error: div by 0" :prevValue / currValue;
+                    break;
+                default:
+                    res = "Undefined"
+            }
+            prevValue = "";
+           document.getElementById("result").value = res;
+        } 
+           
+         //clear the display 
+        function clr() { 
+            document.getElementById("result").value = "";
+            prevValue = "";
+            currValue = ""; 
+        } 
+      </script> 
+      <style> 
+         .title { 
+            margin-bottom: 10px; 
+            text-align:center; 
+            width: 400px; 
+            color:darkblue; 
+            border: solid blueviolet 2px; 
+            border: dotted;
+            border-radius: 40px;
+         } 
+
+        table {
+            border:2px solid black; 
+            width:30%;
+            background-color:yellow;
+        }
+        td {
+            padding:15px;
+            height:100%;
+            color:white;
+        }
+  
+        input[type="button"] { 
+            background-color:rgb(228, 255, 164); 
+            color: red; 
+            font-size: medium;
+            font-weight: bold;
+            border: solid gray 2px; 
+            border-radius: 40px;
+            width: 100%;
+        } 
+
+        input[type="text"] { 
+            background-color:white; 
+            font-size: medium; 
+            font-weight: bolder;
+            border: solid gray 2px; 
+            border-radius: 10px;
+            width: 100% 
+         } 
+      </style> 
+   </head> 
+   <!-- create table -->
+   <body> 
+      <div class = title >Calculator</div> 
+      <table id = table> 
+         <tr> 
+            <td colspan="3"><input type="text" id="result"/></td> 
+            <td><input type="button" value="c" onclick="clr()"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="1" /> </td> 
+            <td><input type="button" value="2" /> </td> 
+            <td><input type="button" value="3" /> </td> 
+            <td><input type="button" value="/" /> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" /> </td> 
+            <td><input type="button" value="5" /> </td> 
+            <td><input type="button" value="6" /> </td> 
+            <td><input type="button" value="-" /> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" /> </td> 
+            <td><input type="button" value="8" /> </td> 
+            <td><input type="button" value="9" /> </td> 
+            <td><input type="button" value="+" /> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." /> </td> 
+            <td><input type="button" value="0" /> </td> 
+
+            <td><input type="button" value="=" /> </td> 
+            <td><input type="button" value="*" /> </td> 
+         </tr> 
+      </table> 
+
+    <script>
+         window.addEventListener("load", function () {
+            const buttons = document.getElementById("table");
+
+            buttons.addEventListener("click", (e) => {
+                let value = e.target.value;
+                switch(e.target.value){
+                    case "=":
+                        solve();
+                        break;
+                    case "*":
+                    case "+":
+                    case "-":
+                    case "/":
+                        doAction(e.target.value);
+                        break;
+                    case "c":
+                        clr();
+                        break;
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                    case "6":
+                    case "7":
+                    case "8":
+                    case "9":
+                    case "0":
+                    case ".":
+                        dis(e.target.value)
+                        break;
+                }
+
+            }, false)
+         }, false)
+    </script>
+   </body> 
+</html> 

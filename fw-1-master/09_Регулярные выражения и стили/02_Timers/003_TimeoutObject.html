@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let timer;
+
+        const showMessage = () => alert("Hello world");
+        
+        window.onload = () => timer = setTimeout(showMessage, 5000);
+
+        const cancel = () => {
+            // отмена задержки, которая была установлена на строке 9
+            clearTimeout(timer);
+        }
+
+    </script>
+</head>
+
+<body>
+    <p>Сообщение будет отображено через 5 секунд</p>
+    <a href="javascript:cancel()">Отмена</a>
+
+</body>
+
+</html>

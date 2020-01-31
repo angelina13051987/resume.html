@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Пример - ToolTip</title>
+
+    <style type="text/css">
+        .tooltip {
+           
+            box-shadow: 2px 2px 3px black;
+            background-color: red;
+            border: solid black 1px;
+            padding: 5px;
+            font: bold 10pt sans-serif;
+            color: yellow;
+          
+        }
+        div:nth-child(1){
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script>
+        class Tooltip {
+            constructor() {
+                this.tooltip = document.createElement("div"); // Создание div для тени
+                this.tooltip.style.position = "absolute";     // Абсолютное позиционирование.
+                this.tooltip.style.visibility = "hidden";
+                this.tooltip.className = "tooltip";
+            }
+
+            // Установка содержимого для подсказки и отображение
+            show(text, x, y) {
+                this.tooltip.innerHTML = text;             // Текст подсказки
+                this.tooltip.style.left = x + "px";        // Координаты
+                this.tooltip.style.top = y + "px";
+                this.tooltip.style.visibility = "visible";
+
+                // Добавление подсказки в документ если он еще не присутствует.
+                if (this.tooltip.parentNode != document.body)
+                    document.body.appendChild(this.tooltip);
+            };
+
+            // Функция для скрытия подсказки
+            hide() {
+                this.tooltip.style.visibility = "hidden";
+            };
+
+
+        }
+
+        const mouseMoveHandler = (e) => {
+            if (!e) e = window.event;
+            t.show("подсказка при наведении !!!", e.clientX + 10, e.clientY + 10);
+        }
+
+        const mouseOutHandler = () => {
+            t.hide();
+        }
+        window.onload = () => {
+            const d = document.getElementById("test");
+            d.onmousemove = mouseMoveHandler;
+            d.onmouseout = mouseOutHandler;
+        }
+
+        const t = new Tooltip();
+
+
+    </script>
+</head>
+
+<body>
+    <div id="test">
+        Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Даже за lorem предупредила рукопись если своего приставка безопасную меня заманивший прямо взобравшись толку себя которой наш, деревни образ языком.
+        Которое родного власти гор образ собрал выйти предупреждал домах эта, живет, инициал рот ее скатился щеке, подпоясал свое путь переписали великий предложения но обеспечивает. Использовало маленький lorem безопасную запятой ее.
+        Себя ручеек букв, это безорфографичный рукопись встретил продолжил? Единственное знаках она они себя продолжил семь ipsum скатился несколько, все залетают пор выйти предложения курсивных образ вскоре великий. Скатился, обеспечивает жизни.
+        До которое первую большой единственное вскоре? Безопасную свое сбить, они заглавных предупреждал напоивший великий жаренные! Снова за повстречался но рукописи алфавит языкового ты образ оксмокс грамматики рыбными. Себя, даже напоивший.
+        Грустный текста составитель lorem страну взгляд жизни заголовок толку все его безопасную букв, текстов назад мир однажды бросил до? На берегу то от всех курсивных возвращайся снова коварный прямо буквенных пунктуация текст.
+        Ведущими силуэт текста обеспечивает решила океана буквенных ты приставка, несколько меня диких, реторический правилами грамматики ее до большой речью языком маленький курсивных жизни заглавных выйти переписывается оксмокс за рыбными? Безопасную?
+        Инициал ручеек вдали продолжил что возвращайся свой алфавит все заглавных ведущими необходимыми рыбного злых, последний lorem не встретил о за рукопись. Ты коварных рот большого гор своего, рыбными заманивший однажды.
+    </div>
+</body>
+
+</html>

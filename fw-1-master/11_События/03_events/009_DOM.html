@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOMContent loaded</title>
+</head>
+
+<body>
+    <!-- DOMContentLoaded – событие отображает, что все DOM-элементы разметки уже созданы, можно их искать, вешать обработчики, создавать интерфейс, но при этом, возможно, ещё не догрузились какие-то картинки или стили.
+        load – страница и все ресурсы загружены, используется редко, обычно нет нужды ждать этого момента.
+         -->
+    <img src="./imgs/002.jpg">
+    <script>
+        window.load = () => {
+            let img = document.querySelector('img');
+            console.log("Размеры картинки: " + img.offsetWidth + "x" + img.offsetHeight);
+        }
+        document.addEventListener("DOMContentLoaded", ready);
+
+        function ready() {
+            console.log('DOM готов');
+        }
+    </script>
+
+
+</body>
+
+</html>

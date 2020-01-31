@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object.create(null)</title>
+</head>
+
+<body>
+    <script>
+        //Зачастую объекты используют для хранения произвольных значений по ключу, 
+        //как коллекцию
+        var user = {};
+        user.text = "Привет";
+        user.age = 35;
+
+
+
+
+
+        //При дальнейшем поиске в этой коллекции мы найдём не только text и age, 
+        //но и встроенные функции:
+
+        console.dir(user)
+
+
+
+
+
+
+
+        //Это может быть неприятным сюрпризом и приводить к ошибкам
+
+        //Чтобы этого избежать, мы можем исключать свойства, не принадлежащие самому объекту
+
+        var data = {};
+
+        // выведет toString только если оно записано в сам объект
+        alert(data.hasOwnProperty('toString') ? data.toString : undefined);
+
+
+
+
+
+
+
+        //Однако, есть путь и проще:
+        var data = Object.create(null);
+        
+        data.text = "Привет";
+
+        //alert(data.text); // Привет
+        console.dir(data)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaSript Массивы</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../globalfile/style/normalize.css">
+    <link rel="stylesheet" href="../../globalfile/style/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logotype"><a href="#"><img src="./image/philip-logo-2.png" alt="logo"></a></div>
+        <ul style="margin: 0;
+        font-size: 1.2em;">
+            <li> <a href="#block1">Тема сгодняшнего урока</a></li>
+            <li> <a href="#block3">Презентация к уроку</a></li>
+            <li> <a href="#block4">Классная работа</a></li>
+            <li> <a href="#block5">Домашняя работа</a></li>
+            <li> <a href="#block6">Дополнительные материалы</a></li>
+            <li> <a href="#block7">Подготовка к следующему уроку</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="block1" class="blocks-standart">
+            <div class="curse">JavaSript</div>
+            <div class="name-lesson">Массивы и способы обратоки массивов</div>
+        </section>
+        <section id="block2" class="blocks-standart">
+            <article>Сегодня будем рассатривать такие темы</article>
+            <ol>
+                <li>Масивы в JavaScript</li>
+                <li>Методы для работы с массивами</li>
+            </ol>
+        </section>
+
+
+
+
+        <section id="block3" class="blocks-standart">
+            <div class="presentation-block">
+                    <br>
+                    <header>Зачем нужны массивы ?</header>
+                    <article>
+                            <div>
+                                    Положим, вы решили написать программу для учета всех видов динозавров, которые вам известны. Вы
+                                    можете создать для каждого вида отдельную переменную:
+                                    <table>
+            
+                                        <tr>
+                                            <td>1</td>
+                                            <td><span class="blue">var</span> dinosaurik1 = "Тираннозавр";</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><span class="blue">var</span> dinosaurik2 = "Велоцираптор";</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><span class="blue">var</span> dinosaurik3 = "Стегозавр";</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><span class="blue">var</span> dinosaurik4 = "Трицератопс";</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td><span class="blue">var</span> dinosaurik5 = "Брахиозавр";</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td><span class="blue">var</span> dinosaurik6 = "Птеранодон";</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td><span class="blue">var</span> dinosaurik7 = "Апатозавр";</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td><span class="blue">var</span> dinosaurik8 = "Диплодок";</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td><span class="blue">var</span> dinosaurik9 = "Компсогнат";</td>
+                                        </tr>
+            
+                                    </table>
+                                    Однако пользоваться этим списком не слишком удобно — у вас
+                                    есть девять переменных там, где можно обойтись лишь одной.
+                                </div>
+                    </article>
+                    
+                    <br><br>
+                <header>Массивы</header>
+                <article>
+                    <span class="red">Массив</span>
+                    – это упорядоченная коллекция значений. Значения в массиве называются элементами, и каждый
+                    элемент характеризуется числовой позицией в массиве, которая называется индексом. Массивы в языке
+                    JavaScript являются нети­пизированными: элементы массива могут иметь любой тип, причем разные
+                    элементы одного и того же массива могут иметь разные типы.
+
+                    <img src="https://tproger.ru/wp-content/uploads/2016/09/cats.png" alt="">
+                   
+            </div>
+
+            <div class="presentation-block">
+                <header>Создание массива</header>
+                <article>
+                    <div>
+                       
+                        <table>
+                           
+                            <tr><td>1</td><td><sapn class="green">// Способ 1</sapn></td></tr>
+                            <tr><td>2</td><td><span class="blue">var</span> name = [ ]</td></td></tr>
+                            <tr><td>3</td><td><sapn class="green">// Способ 2</sapn></td></tr>
+                            <tr><td>4</td><td><span class="blue">var </span> name = <span class="blue">new</span> Arrey()</td></tr>
+                        </table>
+                        Фактически
+                        для задания пустого массива достаточно лишь пары квадратных скобок
+                        
+                    </div>
+                    
+                </article>
+                <header>Как будет выглядеть массив с драконами ?</header>
+                <article>
+                    <div>
+                        Чтобы создать массив со значениями, нужно перечислить эти значения внутри квадратных скобок, разделяя их запятыми. Отдельные значения, хранящиеся в массиве, называют элементами. В данном примере
+все элементы будут строковыми 
+<table>
+    
+    <tr><td>1</td><td><span class="blue">var </span>dinosaurs  = ["Тираннозавр", "Велоцираптор", </td></tr>
+    <tr><td>2</td><td>"Стегозавр","Трицератопс", "Брахиозавр",</td></tr>
+    <tr><td>3</td><td>"Птеранодон", "Апатозавр","Диплодок", </td></tr>
+    <tr><td>4</td><td>"Компсогнат"];</td></tr>
+    </table>
+                    </div>
+                </article>
+            </div>
+            <div class="presentation-block">
+                <header>Доступ к элементам по имени</header>
+                <article>
+                    <div>
+                        Чтобы получить доступ к элементам массива, используйте квадратные
+скобки с индексом нужного вам элемента, как в этом примере:
+<table>
+    
+    <tr><td>1</td><td>dinosaurs[0];</td></tr>
+    <tr><td>2</td><td>"Тираннозавр"</td></tr>
+    <tr><td>3</td><td>dinosaurs[3];</td></tr>
+    <tr><td>4</td><td>"Трицератопс"</td></tr>
+    </table>
+    Индекс — это номер элемента, в котором хранится значение. 
+                    </div>
+                    <img src="./image/matrica1.png" alt="">
+                </article>
+            </div>
+            <div class="presentation-block">
+                <header> Многомерные массивы</header>
+                <article>
+                    <div>
+                            JavaScript  не  поддерживает  «настоящие»  многомерные  массивы,  но  позволяет неплохо  имитировать  
+                            их  при  помощи  массивов  из  массивов.  Для  доступа  к эле-менту данных в массиве массивов 
+                            достаточно дважды использовать оператор []. Например, предположим, что переменная matrix – это
+                             массив массивов чисел. Ка-ж дый элемент matrix[x] – это массив чисел. Для доступа копределенному 
+                             числу в массиве  можно  использовать  выражение matrix[x][y].  Ниже  приводится  кон-кретный пример, где двумерный мас сивиспользуется в качестве таблицы умно-жения:
+
+                        <table>
+                           
+                            <tr><td>1</td><td><span class="green">// ­Соз­дать­ мно­го­мер­ный­ мас­сив</span></td></tr>
+                            <tr><td>2</td><td><span class="blue">var</span>­ table ­=<span class="blue">new</span> ­Array(10)</td></tr>
+                            <tr><td>3</td><td><span class="blue">for</span>(<span class="blue">var­</span> i ­= ­0; ­i ­&lt; ­table.length; ­i++)</td></tr>
+                            <tr><td>4</td><td>­table[i] ­= <span class="blue">new</span> ­ ­Array(10);­­­­­­­­­­</td></tr>
+                            <tr><td>5</td><td></td></tr>
+                            <tr><td>6</td><td><span class="green">//­ Иниц­иал­из­ир­ов­ать ­масс­ив </span></td></tr>
+                            <tr><td>7</td><td><span class="blue">for</span> ( <span class="blue">var</span>­ row ­= ­0; ­row­ &lt; ­table.length;­ row++)­{</td></tr>
+                            <tr><td>8</td><td>&nbsp;&nbsp;­<span class="blue">for</span>( col­ =­ 0;­col­ &lt; ­table[row].length;­ col++)­{ </td></tr>
+                            <tr><td>9</td><td>­table[row][col]­ = ­row * col; </td></tr>
+                            <tr><td>10</td><td>­&nbsp;&nbsp;} </td></tr>
+                            <tr><td>11</td><td>}</td></tr>
+                            <tr><td>12</td><td><span class="green">//­ Расч­ет ­прои­зв­ед­ен­ия ­5 * 7­ с ­пом­ощ­ью­ мног­ом­ерн­ог­о ­масс­ив­а </span></td></tr>
+                            <tr><td>13</td><td><span class="blue">var</span> ­product ­= ­table[5][7];</td></tr>
+                        </table>
+                    </div>
+                </article>
+            </div>
+            <div class="presentation-block">
+                <header> Методы класса Array</header>
+                <article>
+                    <div>
+                            Стандарт ECMA Script3 определяет в составе Array.prototype множество 
+                            удобных функций для работы с массивами, которые доступны как методы 
+                            любого массива. 
+                    </div>
+                </article>
+            </div>
+           
+        </section>
+        <section id="block4" class="blocks-standart">
+            <header>Класна робота</header>
+            <article>
+                <ol>
+                    <li>Создайте массив размерностью 15 элементов, выведите все элементы в обратном порядке и разделите каждый элемент спецсимволом "Облака". При загрузке страницы спросите у пользователя индекс и удалите этот элемент из массива.</li>
+                
+                </ol>
+            </article>
+        </section>
+        <section id="block5" class="blocks-standart">
+            <header>Домашня робота</header>
+            <article>
+                <ol>
+                    <li>
+                            Создайте массив styles с элементами «Джаз» и «Блюз». <br>
+                            Добавьте «Рок-н-ролл» в конец.<br>
+                            Замените значение в середине на «Классика». Ваш код для поиска значения в середине должен работать для массивов с любой длиной.<br>
+                            Удалите первый элемент массива и покажите его.<br>
+                            Вставьте «Рэп» и «Регги» в начало массива.<br>
+                    </li>
+                   
+                    <li>Повторить все то что проходили на уроке</li>
+                </ol>
+            </article>
+        </section>
+        <section id="block6" class="blocks-standart">
+            <header>Дополнительные материалы для закрепления темы</header>
+            <article>
+                <div class="link">
+                    дэвид флэнаган javascript 6 издание страница 164 - 181 страница
+                </div>
+               
+            </article>
+        </section>
+        <section id="block7" class="blocks-standart">
+            <header>Познакомится с материалами к началу следующего занятия № 4 Функции </header>
+            <article>
+                    <div>JavaScript Для детей 126-149ст.</div>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/function-basics" target="_blank">Чтать здесь</a>
+                </div>
+               
+                <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wGdx6Zzbx8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-2RiM6tRk-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+               
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <span class="red"> После выполнения домашней работы отправь на проверку!!!</span>
+            <br>
+            Что делать елси я не знаю с чего мне начать или у меня есть дополнительные вопросы?
+            <ol>
+                <li>Открой браузер перейди <a href="https://google.com" target="_blank" class="red">по ссыке</a>,
+                    попробуй найти ответ здесь на свои вопросы</li>
+                <li>Если не нашел, то пиши своим отдногорупникам в чат, может кто-то уже сталкивался с этим:) <a
+                        href="#" target="_blank" class="red">ссылка</a> </li>
+                <li>Если все еще твой вопрос не решен пиши мне в телеграмм "@Philip7e"</li>
+            </ol>
+        </div>
+    </footer>
+    <script src="../../globalfile/code/index.js"></script>
+    <script src="./javascript.js"></script>
+</body>
+
+</html>

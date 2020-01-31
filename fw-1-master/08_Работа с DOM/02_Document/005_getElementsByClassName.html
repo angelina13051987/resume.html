@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>getElementsByTagName</title>
+    <script type="text/javascript">
+
+        window.onload = ()=>{
+           console.time("one")
+            // получение всех элементов <p>
+            const paragraphs = document.getElementsByClassName("elements");
+            
+        
+            for(let i = 0; i < paragraphs.length; i++){
+             paragraphs[i].style.color = "green"
+         }
+      console.timeEnd('one')
+        }
+    </script>
+</head>
+<body>
+    <p style="color:yellow" class="elements">Hello world!!!</p>
+    <p class="elements">Hello world!!!</p>
+    <p class="elements">Hello world!!!</p>
+    <p class="elements">Hello world!!!</p>
+    <p class="elements">Hello world!!!</p>
+</body>
+</html>

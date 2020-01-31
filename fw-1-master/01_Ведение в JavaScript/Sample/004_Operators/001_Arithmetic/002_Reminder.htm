@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Деление по модулю</title>
+</head>
+<body>
+    <!--
+
+            Оператор взятия остатка %, несмотря на обозначение, никакого отношения к 
+            процентам не имеет. Его результат a % b – это остаток от деления a на b.
+            
+-->
+        <script>
+
+                console.log(5 % 2); // 1, остаток от деления 5 на 2
+                console.log(8 % 3); // 2, остаток от деления 8 на 3
+                console.log(6 % 3); // 0, остаток от деления 6 на 3
+        
+                var a = prompt("Insert a", "9");
+                var result;
+                var b = prompt("Insert b", "5");
+        
+                result = a % b;
+                document.write("a % b = " + result + "<br />");
+        
+        /*
+                console.log(1 % 4)//
+                console.log(2 % 4)//
+                console.log(3 % 4)//
+                console.log(4 % 4)//
+                console.log(5 % 4)//
+                console.log(6 % 4)//
+                console.log(7 % 4)//
+                console.log(8 % 4)//
+                */
+        
+            </script>
+</body>
+</html>

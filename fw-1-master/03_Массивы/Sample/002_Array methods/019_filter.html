@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filter</title>
+</head>
+<body>
+    <!--
+        Метод filter () возвращает массив, содержащий подмножество элементов исходного массива. 
+        Передняя часть должна быть функцией предикатом, т.е. должна возвращать значение true 
+        или false. Метод filter () применяет функцию точно так же, как методы forEach () и map (). 
+        Если возвращается значение true или значение, которое может быть преобразовано в значение 
+        true, то элемент переданного элемента считается членом подмножества и добавляется в массив, 
+        возвращаемый методом.
+    -->
+
+<script>
+var a = [5,4,3,2,1];
+
+var samllvalues = a.filter(function(x){return x < 3}); // [2,1] 
+
+console.log(samllvalues)
+
+var everyother = a.filter(function (x, z) {return z % 2 == 0}); // [5,3,1]
+
+console.log(everyother)
+</script>
+</body>
+</html>

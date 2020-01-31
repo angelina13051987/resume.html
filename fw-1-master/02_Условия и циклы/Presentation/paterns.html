@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaSript Циклы и условные конструкции</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../globalfile/style/normalize.css">
+    <link rel="stylesheet" href="../../globalfile/style/style.css">
+<style>
+.cw1:hover{
+    transform: scale(1.3)
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="logotype"><a href="https://prog.kiev.ua"><img src="./image/philip-logo-2.png" alt="logo"></a></div>
+        <ul style="margin: 0;
+        font-size: 1.2em;">
+            <li> <a href="#block1">Тема сгодняшнего урока</a></li>
+            <li> <a href="#block3">Презентация к уроку</a></li>
+            <li> <a href="#block4">Классная работа</a></li>
+            <li> <a href="#block5">Домашняя работа</a></li>
+            <li> <a href="#block6">Дополнительные материалы</a></li>
+            <li> <a href="#block7">Подготовка к следующему уроку</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="block1" class="blocks-standart">
+            <div class="curse">JavaSript</div>
+            <div class="name-lesson">Условные и циклические конструкции</div>
+        </section>
+        <section id="block2" class="blocks-standart">
+            <article>Сегодня в уроке</article>
+            <ol>
+                <li>Условные конструкции</li>
+                <li>IF</li>
+                <li>ELSE IF</li>
+                <li>SWITCH</li>
+                <li>Циклы</li>
+                <li>FOR</li>
+                <li>WHILE</li>
+                <li>DO WHILE</li>
+            </ol>
+        </section>
+
+        <section id="block3" class="blocks-standart">
+                <div class="presentation-block">
+                        <header>Рекомендуемая книга</header>
+                        <article>
+                            <div>
+                            <img src="https://www.mann-ivanov-ferber.ru/assets/images/covers/03/17803/1.00x-thumb.png" alt=""></div>
+                        </article>
+        
+            <div class="presentation-block">
+                <header>Условные конструкции</header>
+                <article>
+                    Не всегда когда вы пишете программу она будет выполняться линейно то есть строчка за строчкой, а
+                    иногда требуется задать некое условие и в зависимости от этого условия будет выполняться тот ил иной
+                    участок кода. И вот как раз для этих случаев и предусмотрены условные операторы
+                    <div>
+                    <img src="./image/uslovnie-operatori-if-else-elseif.jpg" alt=""></div>
+                </article>
+
+            </div>
+
+            <div class="presentation-block">
+                <header>if</header>
+                <article>
+                    <div>
+                        Оператор if(...) вычисляет условие в скобках и, если результат true, то выполняет блок кода.
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td><span class="blue">var </span> a = 2015</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span class="blue">if</span> (a == 2015) {</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td> alert( "Правильно!" );</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>alert( "Вы такой умный!" )};</td>
+                            </tr>
+                            <tr>
+                                <td>5</td><td></td>
+                            </tr>
+
+                        </table>
+                        <img src="./image/if.png" alt="">
+                    </div>
+                </article>
+            </div>
+            <div class="presentation-block">
+                <header>else if</header>
+                <article>
+                    <div>Оператор if может содержать необязательный блок «else» («иначе»). Выполняется, когда условие
+                        ложно.
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td><span class="blue"> var </span>year = prompt('В каком году появилась спецификация
+                                    ECMAScript-2015?', '');</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span class="blue">if</span> (year == 2015) {</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td> alert( 'Да вы знаток!' );</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>} <span class="blue">else</span> {</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td> alert( 'А вот и неправильно!' )};</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        Иногда, нужно проверить несколько вариантов условия. Для этого используется блок else if.
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td><span class="blue"> var </span>year = prompt('В каком году появилась спецификация
+                                    ECMAScript-2015?', '');</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span class="blue">if</span>(year < 2015) {</td> </tr> <tr>
+                                <td>3</td>
+                                <td> alert( 'Это слишком рано...' );</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>} <span class="blue">else if</span> (year > 2015) {</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td> alert( 'Это поздновато' );</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>} <span class="blue">else</span> {</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>alert( 'Верно!' );</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>};</td>
+                            </tr>
+                        </table>
+                        <img src="./image/if else.png" alt="">
+                    </div>
+                </article>
+            </div>
+            <div class="presentation-block">
+                <header>Тернарный оператор (? : ;)</header>
+                <article>
+
+                    <div>единственный оператор в JavaScript, принимающий три операнда. Он часто используется в качестве
+                        укороченного варианта условного оператора if.</div>
+                    Оператор возвращает значение выражения1, если условие верно, и значение выражения2 в противном
+                    случае.
+                    <div class="name-rules"> Условие ? <span class="blue"> true</span> : <span class="blue">false
+                        </span>;</div>
+                    <img src="./image/ternar.png" alt="">
+                </article>
+            </div>
+            <div class="presentation-block">
+                <header>switch</header>
+                <article>
+                    <div>
+                        Конструкция switch заменяет собой сразу несколько if.
+
+                        Она представляет собой более наглядный способ сравнить выражение сразу с несколькими вариантами.
+                        <table>
+
+                            <tr>
+                                <td>1</td>
+                                <td><span class="blue">var</span> a = 2 + 2;</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><span class="blue">switch</span> (a) {</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><span class="blue">case</span> 3:</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td> alert( 'Маловато' );</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><span class="blue">break</span>;</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><span class="blue">case</span> 4: </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td> alert( 'В точку!' );</td>
+                            </tr>
+                            <tr>
+                                <td>9
+                                <td><span class="blue"> break</span>;</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><span class="blue">case</span> 5:</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td> alert( 'Перебор' );</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><span class="blue">break</span> ;</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td><span class="blue">default</span>: </td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td> alert( "Нет таких значений" );</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td> }</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <img src="./image/switch.png" alt="">
+                </article>
+            </div>
+            <div class="presentation-block">
+                <header>Циклы</header>
+                <article>
+
+                    <div>
+                        Циклы JavaScript обеспечивают многократное выполнение повторяющихся вычислений. Они оптимизируют
+                        процесс написания кода, выполняя одну и ту же инструкцию или блок инструкций, образующих тело
+                        цикла, заданное число раз (используя переменную-счётчик) или пока заданное условие истинно.
+                        Циклы выполняют обход последовательности значений. Однократное выполнение цикла называется
+                        итерацией.
+
+                        На производительность цикла влияют количество итераций и количество операций, выполняемых в теле
+                        цикла каждой итерации.
+                    </div>
+
+
+                </article>
+                <header>while</header>
+                <article>
+                    <div>
+                        Цикл while - цикл с предварительной проверкой условного выражения. Инструкция внутри цикла (блок
+                        кода в фигурных скобках) будет выполняться в случае, если условное выражение вычисляется в true.
+                        Если первая проверка даст результат false, блок инструкций не выполнится ни разу.
+                    </div>
+                    <table>
+                        <span class="blue"></span>
+                        <tr>
+                            <td>1</td>
+                            <td><span class="blue">var</span> i = 1; </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><span class="blue">var</span> msg = '';</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><span class="blue">while</span> (i < 10) {</td> </tr> <tr>
+                            <td>4</td>
+                            <td>msg+= i + ' x 3 = ' + (i * 3) + '&lt;br&gt;'; </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>i++;</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>}</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>document.write(msg);</td>
+                        </tr>
+                    </table>
+                    <script>
+                        window.addEventListener("load", ()=>{
+                        document.getElementById("btn2").onclick = function () {
+                            var i = 1;
+                            var msg = " ";
+                            while (i < 10) {
+                                msg += i + ' x 3 = ' + (i * 3) + '<br>';
+                                i++;
+                            }
+                            document.getElementById("output2").innerHTML = msg;
+                        }
+                    })
+                    </script>
+                    <button id="btn2">Показать решение</button>
+                    <p id="output2"></p>
+            </div>
+            </article>
+            </div>
+            <div class="presentation-block">
+                <header>do while</header>
+                <article>
+                    <div>
+                            Цикл do...while; проверяет условие продолжения после выполнения цикла. В отличие от цикла while, в do...while; тело цикла выполняется как минимум один раз, так как условие проверяется в конце цикла, а не в начале. Данный цикл используется реже, чем while, так как на практике ситуация, когда требуется хотя бы однократное исполнение цикла, встречается редко.
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td><spa class="blue">var</spa>  result = '';</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><spa class="blue">var</spa>  i = 0;</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><spa class="blue">do</spa> {
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>i += 1;</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>result += i + ' ';</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>}<spa class="blue">while</spa>  (i < 5);</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>document.write(result);</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <img src="./image/while.htm" alt="">
+                </article>
+            </div>
+            <div class="presentation-block">
+                <header>for</header>
+                <article>
+                    <div>
+                            Цикл for используется для выполнения итераций по элементам массивов или объектов, напоминающих массивы, таких как arguments и HTMLCollection. Условие проверяется перед каждой итерацией цикла. В случае успешной проверки выполняется код внутри цикла, в противном случае код внутри цикла не выполняется и программа продолжает работу с первой строки, следующей непосредственно после цикла.
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td><span class="blue">for</span>  (var i = 0; i < 5; i++) {</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>console.log(i + ": Hello, JavaScript!");</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>}</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td></td>
+                            </tr>
+                           
+                        </table>
+                    </div>
+                </article>
+            </div>
+
+            
+        </section>
+        <section id="block4" class="blocks-standart">
+            <header>Класна робота</header>
+            <article>
+                <ol>
+                   
+                    <li>Создайте две целочисленные переменные и присвойте им некоторые значения. По этим значениям, используя вложенные циклы, нарисуйте заполненный прямоугольник из звездочек.</li>
+                    <li>
+                            Напишите код, который будет спрашивать логин (prompt). Если посетитель вводит «Админ», то спрашивать пароль, если нажал отмена (escape) – выводить «Вход отменён». Пароль проверять так. Если введён пароль «Чёрный Властелин», то выводить «Добро пожаловать!», иначе – «Пароль неверен», при отмене – «Вход отменён».
+                    </li>
+                </ol>
+            </article>
+        </section>
+        <section id="block5" class="blocks-standart">
+            <header>Домашня робота</header>
+            <article>
+                <ol>
+                    <li>
+                        <img class="cw1" src="./image/dz.png" alt="">
+                    </li>
+                   
+                </ol>
+                <div class="red name-ruses">Выполнить по 09.10.2019 включительно.</div>
+            </article>
+        </section>
+        <section id="block6" class="blocks-standart">
+            <header>Дополнительные материалы для закрепления урока</header>
+            <article>
+                <div class="link">
+                    <a href="https://html5book.ru/cikly-javascript/" target="_blank">Циклы</a>
+                </div>
+                <div class="link">
+                    <a href="https://itchief.ru/javascript/%D1%81onditional-and-logical-operators" target="_blank">Условные конструкции</a>
+                </div>
+                <div class="red name-rules">Книга JavaScript для детей : 95 - 107 страница</div>
+            </article>
+        </section>
+        <section id="block7" class="blocks-standart">
+            <header>Подготовьтесь к следующему уроку № 3 "Массивы"</header>
+            <article>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/array" target="_blank">Массивы (let - это просто переменная типа как var)</a>
+                </div>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/array-methods" target="_blank">Методы для работы с массивами</a>
+                </div>
+                
+                <div class="red name-rules">Книга JavaScript для детей : 49 - 70 страница</div>
+                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/cGA3N5coak4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IFBqJSPs5ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <span class="red"> После выполнения домашней работы отправь на проверку!!!</span>
+            <br>
+            Что делать елси я не знаю с чего мне начать или у меня есть дополнительные вопросы?
+            <ol>
+                <li>Открой браузер перейди <a href="https://google.com" target="_blank" class="red">по ссыке</a>,
+                    попробуй найти ответ здесь на свои вопросы</li>
+                <li>Если не нашел, то пиши своим отдногорупникам в чат, может кто-то уже сталкивался с этим:) <a
+                        href="#" target="_blank" class="red">ссылка</a> </li>
+                <li>Если все еще твой вопрос не решен пиши мне в телеграмм "@Philip7e"</li>
+            </ol>
+        </div>
+    </footer>
+    <script src="../../globalfile/code/index.js"></script>
+</body>
+
+</html>

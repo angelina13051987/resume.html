@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Touch</title>
+    <style>
+        p {
+            width: 50%;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- touch-события подобны событиям мыши за исключением что они поддерживают одновременные касания и различные расположения на поверхности касания.  -->
+
+    <!-- Существует 4 основных события нажатия на сенсор: touchstart, touchend, touchmove, touchcancel -->
+
+    <h1>Touch events</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus sint minima impedit eos atque tempore voluptatem voluptas sequi vero? Atque iure recusandae vero exercitationem pariatur ut mollitia magnam consequuntur aspernatur? Aliquam deserunt
+        consequatur dolore distinctio autem placeat repellendus optio dolorem?</p>
+    <script>
+        document.querySelector('p').addEventListener('touchstart', (event) => {
+            // multitouch - В массиве TouchList будет отображаться несколько объектов Touch
+            console.log('touchstart', event);
+        });
+        document.querySelector('p').addEventListener('touchend', (event) => {
+            console.log('touchend', event);
+        }, false);
+        document.querySelector('p').addEventListener('touchmove', (event) => {
+            console.log('touchmove', event);
+        }, false);
+        //  Происходит если палец пользователя перемещается в интерфейс браузера или прикосновение должно быть отменено. К примеру, запустилось модальное окно (которое отменило действие).
+        setTimeout(() => {
+            alert("stop touch")
+        }, 5000);
+        document.querySelector('p').addEventListener('touchcancel', function(event) {
+            console.log('touchcancel', event);
+        }, false);
+    </script>
+</body>
+
+</html>

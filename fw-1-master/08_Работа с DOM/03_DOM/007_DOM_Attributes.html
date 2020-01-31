@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Работа с узлами DOM - Атрибуты</title>
+    <script>
+        window.onload = ()=>{
+            const a1 = document.querySelector("#a1"),
+            a2 = document.querySelector("#a2"),
+            a3 = document.querySelector("#a3");
+
+            // установка атрибута
+            a1.setAttribute("href", "https://prog.kiev.ua/");
+
+            // удаление атрибута
+            a2.removeAttribute("href");
+
+            // чтение атрибута
+            alert(a3.getAttribute("href"));
+        }
+    </script>
+</head>
+<body>
+    <a id="a1">Text a1</a>
+    <a id="a2" href="https://prog.kiev.ua">Text a2</a>
+    <a id="a3" href="https://prog.kiev.ua"">Text a3</a>
+</body>
+</html>

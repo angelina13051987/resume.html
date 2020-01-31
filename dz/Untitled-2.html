@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Дано два числа А и Б. Выведите на экран сумму всех чисел, 
+                расположенных в числовом промежутке от А до Б. 
+                Выведите на экран все нечетные значения, 
+                расположенные в числовом промежутке от А до Б. */
+        var a = 1;
+        var b = 9;
+        sum = 0;
+        while (a < b) {
+            a++;
+
+            if (a < b) {
+                sum += a;
+            }
+        }
+        document.write(sum + "<br/>");
+
+        for (var i = 1; i < 9; i++) {
+            if (i % 2) {
+                document.write(i);
+                document.write(" ");
+            }
+        }
+    </script>
+</body>
+
+</html>

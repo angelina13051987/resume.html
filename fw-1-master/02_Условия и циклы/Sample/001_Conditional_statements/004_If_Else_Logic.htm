@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+/*
+        var trueVal = true;
+        var falseVal = false;
+
+        if (!trueVal) {
+            document.write("Первый блок");
+        }
+        else if (!falseVal) {
+            document.write("Второй блок");
+        }
+        else {
+            document.write("Ни один блок не выполнился");
+        }
+ */
+
+
+
+
+        var value1 = confirm("<p>Принять первое значение как истину?");
+
+        if (value1) {
+            document.write("<p>Первое значение ИСТИНА");
+        }
+        else {
+            document.write("<p>Первое значение ЛОЖЬ");
+        }
+
+
+        var value2 = confirm("<p>Принять второе значение как истину?");
+
+        if (value2) {
+            document.write("<p>Второе значение ИСТИНА");
+        }
+        else {
+            document.write("<p>Второе значение ЛОЖЬ");
+        }
+
+
+        if (value1 == true && value2 == true) {
+            document.write("<p>Оба значения ИСТИНА");
+        }
+        else if (value1 == true || value2 == true) {
+            document.write("<p>Одно из значений ИСТИНА, другое ЛОЖЬ");
+        }
+        else {
+            document.write("<p>Оба значения ЛОЖЬ");
+        }
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

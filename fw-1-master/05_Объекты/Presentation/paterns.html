@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaSript Тема урока</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../globalfile/style/normalize.css">
+    <link rel="stylesheet" href="../../globalfile/style/style.css">
+    <style>
+    img:hover{
+        transform: scale(1.5);
+    }</style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logotype"><a href="#"><img src="./image/philip-logo-2.png" alt="logo"></a></div>
+        <ul style="margin: 0;
+        font-size: 1.2em;">
+            <li> <a href="#block1">Тема сгодняшнего урока</a></li>
+            <li> <a href="#block3">Презентация к уроку</a></li>
+            <li> <a href="#block4">Классная работа</a></li>
+            <li> <a href="#block5">Домашняя работа</a></li>
+            <li> <a href="#block6">Дополнительные материалы</a></li>
+            <li> <a href="#block7">Подготовка к следующему уроку</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="block1" class="blocks-standart">
+            <div class="curse">JavaSript</div>
+            <div class="name-lesson">Объекты</div>
+        </section>
+        <section id="block2" class="blocks-standart">
+            <article>Сегодня в уроке</article>
+            <ol>
+               <li>Что такое Объект</li>
+               <li>Работа с объектом</li>
+            </ol>
+        </section>
+
+
+
+
+        <section id="block3" class="blocks-standart">
+                <div class="presentation-block">
+                    <header>
+                        Объекты</header>
+                    <article>
+                        <div>Объекты JavaScript очень похожи на массивы, но для доступа к элементам объектов используются строки, а не числа. Эти строки называют ключами, или свойствами, а элементы, которые им соответствуют, — значениями. Вместе эти фрагменты информации образуют пары «ключзначение». Причем если массивы используются главным образом как списки, хранящие множество элементов, то объекты часто применяют как одиночные сущности с множеством характеристик, или атрибутов. 
+                        </div>
+                        <div>
+                            <img src="./image/obj1.png" >
+                        </div>
+                    </article>
+                    
+                </div>
+               
+        </section>
+        <section id="block4" class="blocks-standart">
+            <header>Классная работа</header>
+            <article>
+               <ol>
+                   <li>Создайте объект криптокошилек.
+                    В кошельке должно хранится имя владельца, несколько валют Bitcoin, Ethereum, Stellar и в каждой валюте дополнительно есть имя валюты, логотип, несколько монет и курс на сегодняшний день.
+                    Также в объекте кошелек есть метод при вызове которого он принимает имя валюты и выводит на страницу информацию.
+                    "Добрый день, ... ! На вашем балансе (Название валюты и логотип) осталось N монет, если вы сегодня продадите их то, получите ...грн.
+                    
+                    Вывод на страницу должен быть касиво формлен с использованием css и html.</li>
+                   
+               </ol>
+            </article>
+        </section>
+        <section id="block5" class="blocks-standart">
+            <header>Домашнее задание</header>
+            <article>
+               <ol>
+                   <li>Создать объект "Документ", в котором определить свойства "Заголовок, тело, футер, дата". Создать в объекте вложенный объект - "Приложение". Создать в объекте "Приложение", вложенные объекты, "Заголовок, тело, футер, дата". Создать методы для заполнения и отображения документа.</li>
+               </ol>
+            </article>
+        </section>
+        <section id="block6" class="blocks-standart">
+            <header>Дополнитнльные материалы</header>
+            <article>
+                <div class="link">
+                   JavaScript для детей 70-81
+                </div>
+                
+            </article>
+        </section>
+        <section id="block7" class="blocks-standart">
+            <header>Познакомится с материалами к началу следующего занятия № 6 прототипы и конструкторы </header>
+            <article>
+                <div class="link">JavaScript для детей - ст176-188</div>
+    
+                <div class="link">дэвид флэнаган 6 издание - ст221-235</div>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/prototypes" target="_blank">Прототипы</a>
+                </div>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/constructor-new" target="_blank">Функции конструктор</a>
+                </div>
+               
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fGTcowA49fQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </article>
+        </section>
+    </main>
+    <footer>
+     <div>
+         <span class="red"> После выполнения домашней работы отправь на проверку!!!</span>
+         <br>
+         Что делать елси я не знаю с чего мне начать или у меня есть дополнительные вопросы?
+         <ol>
+             <li>Открой браузер перейди  <a href="https://google.com" target="_blank" class="red">по ссыке</a>, попробуй найти ответ здесь на свои вопросы</li>
+             <li>Если не нашел, то пиши своим отдногорупникам в чат, может кто-то уже сталкивался с этим:) <a href="#" target="_blank" class="red">ссылка</a> </li>
+             <li>Если все еще твой вопрос не решен пиши мне в телеграмм "@Philip7e"</li>
+         </ol>
+     </div>
+    </footer>
+    <script src="../../globalfile/code/index.js"></script>
+</body>
+
+</html>

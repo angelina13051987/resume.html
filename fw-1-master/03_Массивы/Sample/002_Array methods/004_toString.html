@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        В JavaScript есть метод toString (). Для массива этот метод позволяет 
+        отображать каждый элемент в строке (вызывая необходимость в методах toString () 
+        элементов массива) и выводить список этих строк через запятую. Примечательно, 
+        что результат не включает квадратные скобки или другие разделители вокруг 
+        значений массива.
+    -->
+
+    <script>
+     var arr = [1,2,3].toString()            // Получается'1,2,3 'ToString 
+     var arr2 = ["а","б", "в"].toString()    // Получается'a, б, в' 
+     var arr3 = [1 , [2, 'с']].toString ()   // Получается'1,2, с»
+console.log('arr : ' +arr +', arr2 : '+ arr2 +', arr3 : '+ arr3);
+
+    </script>
+
+</body>
+</html>

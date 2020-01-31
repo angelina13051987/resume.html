@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var age = prompt("введите возраст");
+        //(age >= 18 && age <= 60) ? alert('you are grate'):
+        // alert('not right');
+
+        /*function matOp(a, b, op) {
+
+            if (op == "+") {
+                return res = a + b;
+            }
+            if (op == "-") {
+                return res = a - b;
+            }
+            if (op == "*") {
+                return res = a * b
+            };
+        };
+        matOp(9, 3, '-');
+        document.write(mat.Op);*/
+
+        /*var student = {
+            name: "Alina",
+            age: 18,
+            sayHello: function() {
+                alert("Hello from" + name)
+            }
+
+        }
+
+
+        function Student(n, a) {
+            this.name = n;
+            var age = a;
+            this.sayHello = function() {
+                alert("Hello from" + this.name);
+            }
+            this.getAge = function() {
+                alert(this.name + " age is " + age);
+            }
+        }
+        var fun0 = new Student('Alina', 18);
+        var fun1 = new Student('Aliaa', 19);
+        var fun2 = new Student('Aliaaa', 17);
+        var fun4 = new Student('Aliaaaa', 16);
+        var fun5 = new Student('Aliaaaaa', 15);*/
+
+        function HtmlElement(tag, content, bg) {
+            var el = document.createElement(tag);
+            this.show = function() {
+                el.innerHTML = content;
+                el.style.background = bg;
+                document.body.appendChild(el);
+            }
+            this.remove = function() {
+                document.body.removeChild(el);
+            }
+        }
+        var el1 = new HtmlElement('div', '<p>priv</p>', 'green');
+        var el2 = new HtmlElement('div', '<p>priv111</p>', 'blue');
+        var el5 = new HtmlElement('div', '<p>priv2222</p>', 'grey');
+    </script>
+</body>
+
+</html>

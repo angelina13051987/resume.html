@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaSript Тема урока</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../globalfile/style/normalize.css">
+    <link rel="stylesheet" href="../../globalfile/style/style.css">
+    <style>
+    li{
+        margin-bottom: 50px;
+        
+        padding: 15px;
+    }</style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logotype"><a href="#"><img src="./image/philip-logo-2.png" alt="logo"></a></div>
+        <ul style="margin: 0;
+        font-size: 1.2em;">
+            <li> <a href="#block1">Тема сгодняшнего урока</a></li>
+            <li> <a href="#block3">Презентация к уроку</a></li>
+            <li> <a href="#block4">Классная работа</a></li>
+            <li> <a href="#block5">Домашняя работа</a></li>
+            <li> <a href="#block6">Дополнительные материалы</a></li>
+            <li> <a href="#block7">Подготовка к следующему уроку</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="block1" class="blocks-standart">
+            <div class="curse">JavaSript</div>
+            <div class="name-lesson">ES6 Практический урок</div>
+        </section>
+        <section id="block2" class="blocks-standart">
+            <article>Сегодня на уроке</article>
+            <ol>
+               <li>Обзор ES6</li>
+              
+            </ol>
+        </section>
+
+
+
+
+        <section id="block3" class="blocks-standart"><div class="presentation-block">
+                    <header>JavaScript - ECMAScript</header>
+                    <article>
+                        <div>
+                            
+                JavaScript – динамично развивающийся язык программирования. Регулярно появляются предложения о добавлении в JS новых возможностей, они анализируются, и, если предложения одобряются, то описания новых возможностей языка переносятся в черновик https://tc39.github.io/ecma262/, а затем публикуются в спецификации.
+                
+                        </div>
+                        <div>
+                                Стандарт ES-2015 был принят в июне 2015. 
+                        </div>
+                    </article>
+                    
+                </div>
+               
+        </section>
+        <section id="block4" class="blocks-standart">
+            <header>Классная работа</header>
+            <article>
+               <ol>
+                   <li>Используйте ES6</li>
+                   <li>
+                        
+«Виселица» — игра на угадывание слов. Один игрок выбирает слово, а второй пытается его отгадать. Например, 
+если первый игрок загадал слово КАПУСТА, он изобразит семь «пустых мест», по одному на каждую букву слова:
+
+<br>_ _ _ _ _ _ _<br>
+
+Второй игрок старается отгадать это слово, называя буквы. Каждый раз, когда он угадывает букву, первый игрок заполняет 
+пустоты, вписывая ее везде, где она встречается. Например, если второй игрок назвал букву «А», первый должен вписать 
+все «А» для слова КАПУСТА, вот так:
+
+<br>_ А _ _ _ _ А<br>
+
+Если второй игрок назовет букву, которой нет в слове, у него отнимается очко, а первый игрок рисует руку, 
+ногу или другую часть тела человечка. Если первый игрок закончит рисовать человечка раньше, чем второй угадает 
+все буквы, второй игрок проиграл. В нашем варианте «Виселицы» JavaScript будет выбирать слово, а игрок-человек — отгадывать 
+буквы. И рисовать человечка наша программа не будет, поскольку мы пока не знаем, как это делается
+
+                   </li>
+                   <li>
+                        Реализовать функцию для создания объекта "пользователь".
+                       <br>
+                       Написать функцию createNewUser(), которая будет создавать и возвращать объект newUser.
+При вызове функция должна спросить у вызывающего имя и фамилию.
+Используя данные, введенные пользователем, создать объект newUser со свойствами firstName и lastName.
+Добавить в объект newUser метод getLogin(), который будет возвращать первую букву имени пользователя, соединенную с фамилией пользователя, все в нижнем регистре (например, Ivan Kravchenko → ikravchenko).
+Создать пользователя с помощью функции createNewUser(). Вызвать у пользователя функцию getLogin(). Вывести в консоль результат выполнения функции.
+
+                   </li>
+                   <li>
+                        Дополнить функцию createNewUser() методами подсчета возраста пользователя и его паролем.
+                       <br>
+                       Возьмите выполненное задание выше (созданная вами функция createNewUser()) и дополните ее следующим функционалом:
+
+При вызове функция должна спросить у вызывающего дату рождения (текст в формате dd.mm.yyyy) и сохранить ее в поле birthday.
+Создать метод getAge() который будет возвращать сколько пользователю лет.
+Создать метод getPassword(), который будет возвращать первую букву имени пользователя в верхнем регистре, 
+соединенную с фамилией (в нижнем регистре) и годом рождения. (например, Ivan Kravchenko 13.03.1992 → Ikravchenko1992).
+
+
+Вывести в консоль результат работы функции createNewUser(), а также функций getAge() и getPassword() созданного объекта.
+
+
+                   </li>
+                   <li>
+                        Реализовать функцию фильтра массива по указанному типу данных.
+                       <br>
+                       
+Написать функцию filterBy(), которая будет принимать в себя 2 аргумента. Первый аргумент - массив, который будет содержать в себе любые данные, второй аргумент - тип данных.
+Функция должна вернуть новый массив, который будет содержать в себе все данные, которые были переданы в аргумент, за исключением тех, тип которых был передан вторым аргументом. То есть, если передать массив ['hello', 'world', 23, '23', null], и вторым аргументом передать 'string', то функция вернет массив [23, null].
+
+
+                   </li>
+               </ol>
+            </article>
+        </section>
+        <section id="block5" class="blocks-standart">
+            <header>Домашнее задание</header>
+            <article>
+               <ol>
+                  <li>Доделайте классную работу</li>
+               </ol>
+            </article>
+        </section>
+        <section id="block6" class="blocks-standart">
+            <header>Дополнитнльные материалы</header>
+            <article>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/polyfills" target="_blank">polyfills</a>
+                </div>
+                <div class="link">
+                    <a href="https://learn.javascript.ru/es-modern-usage" target="_blank">es-modern-usage</a>
+                </div>
+               
+            </article>
+        </section>
+        <section id="block7" class="blocks-standart">
+            <header>Познакомится с материалами к началу следующего занятия № 8
+                    Document Object Model (DOM)</header>
+            <article>
+                    
+                <div class="link">
+                    <a href="https://learn.javascript.ru/document" target="_blank">DOM</a>
+                </div>
+               
+                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/-2WiaSvOj78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/_pLpx6btq6U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </article>
+        </section>
+    </main>
+    <footer>
+     <div>
+         <span class="red"> После выполнения домашней работы отправь на проверку!!!</span>
+         <br>
+         Что делать елси я не знаю с чего мне начать или у меня есть дополнительные вопросы?
+         <ol>
+             <li>Открой браузер перейди  <a href="https://google.com" target="_blank" class="red">по ссыке</a>, попробуй найти ответ здесь на свои вопросы</li>
+             <li>Если не нашел, то пиши своим отдногорупникам в чат, может кто-то уже сталкивался с этим:) <a href="#" target="_blank" class="red">ссылка</a> </li>
+             <li>Если все еще твой вопрос не решен пиши мне в телеграмм "@Philip7e"</li>
+         </ol>
+     </div>
+    </footer>
+    <script src="../../globalfile/code/index.js"></script>
+</body>
+
+</html>

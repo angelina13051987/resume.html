@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Использование CSS классов</title>
+
+    <style type="text/css">
+        .class1 {
+            font-family: Tahoma;
+            color: Blue;
+        }
+
+        .class2 {
+            font-family: Courier New;
+            color: Red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <input id="first" type="button" value="First" />
+    <input id="second" type="button" value="Second" />
+    <div id="testDiv">
+        Test Div
+    </div>
+
+    <script>
+        let div;
+
+        const firstButtonHandler = () => {
+            // установка значения для атрибута class (присвоение CSS класса для элемента)
+            div.className = "class1";
+        },
+
+            secondButtonHandler = () => {
+                div.className = "class2";
+            }
+
+        document.getElementById("first").onclick = firstButtonHandler;
+        document.getElementById("second").onclick = secondButtonHandler;
+        div = document.getElementById("testDiv");
+
+
+    </script>
+</body>
+
+</html>

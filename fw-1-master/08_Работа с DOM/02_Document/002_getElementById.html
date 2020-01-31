@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementById</title>
+    <script>
+        // событие срабатывает после полной загрузки окна.
+        window.onload = () =>{
+            // получение элемента со страницы по значению атрибута id
+            const paragraph = document.getElementById("output");
+            const hyperlink = document.getElementById("link");
+
+            paragraph.innerHTML = "HELLO WORLD !!!";
+            hyperlink.innerHTML = "EDUCATION SITE !!!";
+       }
+
+    </script>
+</head>
+<body>
+    <p id="output">Hello world</p>
+    <a id="link" href="https://prog.kiev.ua/">Education site</a>
+</body>
+</html>

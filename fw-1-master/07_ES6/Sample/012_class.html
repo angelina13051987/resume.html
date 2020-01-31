@@ -1,0 +1,25 @@
+<script>
+class Animal {
+    constructor(name, voice){
+        //свойства экземпляра
+        this.name = name;
+        this.voice = voice;
+    }
+    //метод на прототипе
+    sey(){
+        console.log(`${this.name}  goes  ${this.voice} `)
+    }
+}
+
+class Bird extends Animal{
+    //extends Animal унаследовать свойства от  Animal
+      constructor(name, voice, canFly){
+        super(name, voice)
+        this.canFly = canFly;
+      }
+    
+}
+
+const dog = new Bird('Duck', 'quack', true)
+
+</script>

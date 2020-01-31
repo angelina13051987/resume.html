@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <title>setInterval and clearInterval</title>
+
+</head>
+
+<body>
+    <p id="output">-</p>
+    <input id="startButton" type="button" value="Start" />
+    <input id="stopButton" type="button" value="Stop" />
+
+    <script>
+
+        let counter = 0, intervalHandler;
+        const get = (id) => document.getElementById(id);
+           
+
+       const count = () => {
+            get("output").innerHTML = counter;
+            counter++;
+        }
+
+        get("startButton").onclick = () => {
+            intervalHandler = setInterval(count, 5);
+        }
+
+        get("stopButton").onclick = () => {
+            // останавливаем таймер, по которому вызывается функция count
+            clearInterval(intervalHandler);
+        }
+    
+
+        // пользовательская функция для получения элементов страницы по id
+       
+
+    </script>
+
+</body>
+
+</html>

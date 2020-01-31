@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Примеры регулярных выражений</title>
+    <script type="text/javascript">
+        // 21-12-1999
+        let pattern = /\d{1,2}-\d{1,2}-\d{4}/;
+        let text = "21-12-1999";
+        document.write(text + " -> " + pattern.test(text) + "<br />");
+
+        // +38 (063) 223-23-23
+        pattern = /\+38 \(\d{3}\) \d{3}-\d{2}-\d{2}/;
+        text = "+38 (063) 223-23-23";
+        document.write(text + " -> " + pattern.test(text) + "<br />");
+
+        // Иванов Иван Иванович
+        pattern = /[а-яА-Я]+ [а-яА-Я]+ [а-яА-Я]+/;
+        text = "Иванов Иван Иванович";
+        document.write(text + " -> " + pattern.test(text) + "<br />");
+
+        // ivanov.ivan@example.com
+        pattern = /\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b/i;
+        text = "ivanov.ivan@example.com.ua";
+        document.write(text + " -> " + pattern.test(text) + "<br />");
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

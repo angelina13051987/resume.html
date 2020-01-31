@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод replace</title>
+    <style>
+    span{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: red;
+    }
+    </style>
+    <script type="text/javascript">
+        // replace() -  производит операцию поиска с заменой.
+
+        const text = "Строка для 123тести456рования при789мера.";
+        const pattern = /\d\d\d/g; // g - глобальный поиск - все вхождения, а не только первое.
+        const result = text.replace(pattern, "<span></span>");
+        document.write(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

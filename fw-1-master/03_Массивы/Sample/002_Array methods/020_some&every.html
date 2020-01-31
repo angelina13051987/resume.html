@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+
+        Методы every () и some () являются предикатами массива: они применяют указанную 
+        функцию-предикат к элементам массива и возвращают значение true или false. 
+        Метод each () напоминает математический квантор всеобщности ∀: он возвращает true, 
+        только если перед вами установлена ​​функция-предикат вернулась true для всех 
+        элементов массива
+
+   -->
+
+    <script>
+        var a = [1, 2, 3, 4, 5];
+       var tester1 = a.every(function (x) { return x < 10; }) // => верно: все значения <10.
+       var tester2 = a.every(function (x) { return x % 2 === 0; }) // => ложный: не всечетный.
+
+       console.log('test1 '+ tester1 +'/ test2 '+ tester2)
+    </script>
+    <!--
+
+Метод some () напоминает математический квантор существования: он возвращает 
+значение true, если в массиве есть хотя бы один элемент, для которого 
+функция-предикат вернет true, а значение false возвращается методом, 
+только если функция-предикат вернет false для всех элементов массива
+ 
+    -->
+
+    <script>
+        var a = [1, 2, 3, 4, 5];
+        a.some(function (x) { return x % 2 === 0; }) // => верно: имеются четные числа.
+        a.some(isNaN) // = > ложь: нет нечисловых элементов.
+    </script>
+</body>
+
+</html>

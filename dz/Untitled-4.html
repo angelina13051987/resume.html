@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Создайте массив styles с элементами «Джаз» и «Блюз».
+        //Добавьте «Рок-н-ролл» в конец.
+        //Замените значение в середине на «Классика». 
+        //Ваш код для поиска значения в середине должен работать для массивов с любой длиной.
+        //Удалите первый элемент массива и покажите его.
+        //Вставьте «Рэп» и «Регги» в начало массива.
+        let styles = ['Джаз', 'Блюз'];
+        styles.push('Рок-н-ролл');
+        styles[Math.floor(styles.length / 2)] = "Классика";
+        alert(styles.shift());
+        styles.unshift('Рэп', 'Регги');
+        document.write(styles + "</br>");
+    </script>
+</body>
+
+</html>

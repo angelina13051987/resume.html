@@ -1,0 +1,22 @@
+<script>
+const user = {
+    name: {
+        first : 'Ivan',
+    },
+    userPhone : '0000000',
+    age: 27,
+} 
+
+console.log(Object.entries(user))
+
+const {age, name : {first : firstName}, userPhone} = user
+
+document.write("user :" + firstName + '<br> phone : ' + userPhone+' <br> age :' + age)
+
+const arr = [1, 1, 2, 8, 9, 'la la la']
+
+const [a, b, c, ...others ] = arr
+
+alert(a +' '+ b + ' ' + c + '/' + others)
+
+</script>

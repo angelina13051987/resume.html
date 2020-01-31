@@ -1,0 +1,32 @@
+<script>
+    //страрый способ создания функции
+function square (x){
+    return x * x
+}
+
+// новый способ, функция стрелка (аргумент) => { тело выполнения функции}
+const _square = (x) => x*x
+
+const arr = [-22, 45, 5 ,333, -5, 10, -75];
+
+// ищем самое большое число
+const data = arr.filter((item)=> item > 0)
+.reduce((max, val) => Math.max(max, val))
+
+document.write(data)
+
+const greeter = {
+    greet : function (name) {
+        console.log("Hello", name)
+    },
+
+    greetAll:function (names){
+        names.forEach(name => {
+            //console.log(this)
+            this.greet(name)
+      });
+    }
+}
+
+greeter.greetAll(['Ivan', 'Vasya', 'Roman'])
+</script>
